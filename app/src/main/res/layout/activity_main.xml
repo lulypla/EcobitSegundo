@@ -6,60 +6,161 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:background="#43A047">
+    android:background="#FFFFFF">  <!--43A047-->
 
-    <FrameLayout
-        android:id="@+id/frameLayout"
-        android:layout_width="423dp"
-        android:layout_height="518dp"
-        android:background="#fff"
-        tools:layout_editor_absoluteX="-11dp"
-        tools:layout_editor_absoluteY="212dp"
-        >
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="450dp"
+        android:background="@drawable/main"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Empezar"
-            android:textColor="#fff" />
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="323dp"
+        android:layout_height="410dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginEnd="45dp"
+        android:layout_marginRight="45dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/imageView2"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/imageView2"
+        app:layout_constraintTop_toTopOf="@+id/imageView2"
+        app:layout_constraintVertical_bias="0.922"
+        app:srcCompat="@drawable/tarjetablanca" />
 
-        <Button
-            android:id="@+id/inicio"
-            android:layout_width="283dp"
-            android:layout_height="61dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="80dp"
-            android:background="@android:color/background_dark"
-            android:text="INICIAR SESIÓN"
-            android:textColor="#fff"
-            android:textSize="25dp"
-            android:textStyle="bold" />
+    <Button
+        android:id="@+id/inicio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bottong"
+        android:text="INICIAR SESION"
+        android:textColor="@color/colorTextWhite"
+        app:layout_constraintBottom_toTopOf="@+id/registro"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintHorizontal_bias="0.513"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/imageView"
+        app:layout_constraintVertical_bias="1.0" />
 
-        <Button
-            android:id="@+id/registro"
-            android:layout_width="283dp"
-            android:layout_height="61dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="180dp"
-            android:background="@color/colorPrimaryDark"
-            android:text="REGISTRARSE"
-            android:textColor="#fff"
-            android:textSize="25dp"
-            android:textStyle="bold" />
+    <Button
+        android:id="@+id/registro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bottonr"
+        android:text="REGISTRARME"
+        android:textColor="@color/colorTextWhite"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintHorizontal_bias="0.54"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        app:layout_constraintVertical_bias="0.0" />
 
-    </FrameLayout>
+    <Button
+        android:id="@+id/btnFace"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="90dp"
+        android:layout_marginRight="90dp"
+        android:background="@drawable/face"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintHorizontal_bias="0.43"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/registro"
+        app:layout_constraintVertical_bias="0.141" />
+
+    <Button
+        android:id="@+id/btnGoogle"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="90dp"
+        android:layout_marginLeft="90dp"
+        android:background="@drawable/google"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/registro"
+        app:layout_constraintVertical_bias="0.146" />
 
     <TextView
-        android:id="@+id/empezar"
-        android:layout_width="271dp"
-        android:layout_height="84dp"
-        android:drawingCacheQuality="auto"
-        android:text="Empezar"
-        android:textColor="#FFFFFF"
-        android:textSize="65sp"
-        android:textStyle="bold"
-        android:visibility="visible"
-        tools:layout_editor_absoluteX="25dp"
-        tools:layout_editor_absoluteY="99dp" />
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginEnd="80dp"
+        android:layout_marginRight="80dp"
+        android:text="Al registrarme, acepto la Política de privacidad y los Términos del servicio"
+        android:textColor="#000"
+        android:textSize="7dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintHorizontal_bias="0.238"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        app:layout_constraintVertical_bias="0.757" />
+
+
+    <!--  <FrameLayout
+          android:id="@+id/frameLayout"
+          android:layout_width="423dp"
+          android:layout_height="518dp"
+          android:background="#fff"
+          tools:layout_editor_absoluteX="-11dp"
+          tools:layout_editor_absoluteY="212dp"
+          >
+
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="Empezar"
+              android:textColor="#fff" />
+
+          <Button
+              android:id="@+id/inicio"
+              android:layout_width="283dp"
+              android:layout_height="61dp"
+              android:layout_gravity="center_horizontal"
+              android:layout_marginTop="80dp"
+              android:background="@android:color/background_dark"
+              android:text="INICIAR SESIÓN"
+              android:textColor="#fff"
+              android:textSize="25dp"
+              android:textStyle="bold" />
+
+          <Button
+              android:id="@+id/registro"
+              android:layout_width="283dp"
+              android:layout_height="61dp"
+              android:layout_gravity="center_horizontal"
+              android:layout_marginTop="180dp"
+              android:background="@color/colorPrimaryDark"
+              android:text="REGISTRARSE"
+              android:textColor="#fff"
+              android:textSize="25dp"
+              android:textStyle="bold" />
+
+      </FrameLayout>
+
+      <TextView
+          android:id="@+id/empezar"
+          android:layout_width="271dp"
+          android:layout_height="84dp"
+          android:drawingCacheQuality="auto"
+          android:text="Empezar"
+          android:textColor="#FFFFFF"
+          android:textSize="65sp"
+          android:textStyle="bold"
+          android:visibility="visible"
+          tools:layout_editor_absoluteX="25dp"
+          tools:layout_editor_absoluteY="99dp" />  -->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/../Ecobit.iml" filepath="$PROJECT_DIR$/../Ecobit.iml" group="Ecobit" />
+      <module fileurl="file://$PROJECT_DIR$/../EcobitSegundo-Ecobit.iml" filepath="$PROJECT_DIR$/../EcobitSegundo-Ecobit.iml" group="Ecobit" />
+      <module fileurl="file://$PROJECT_DIR$/EcobitSegundo-app.iml" filepath="$PROJECT_DIR$/EcobitSegundo-app.iml" group="Ecobit/app" />
       <module fileurl="file://$PROJECT_DIR$/app.iml" filepath="$PROJECT_DIR$/app.iml" group="Ecobit/app" />
     </modules>
   </component>

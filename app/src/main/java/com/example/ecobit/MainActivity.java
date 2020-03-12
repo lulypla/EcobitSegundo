@@ -22,12 +22,8 @@ public class MainActivity extends AppCompatActivity {
 
      //METODO Next para  btnnext
     public void Next(View view){
-        Intent next = new Intent(this, Intro2Activity.class);
-        startActivity(next);
-
-
-
-
+        startActivity(new Intent(this, Intro2Activity.class));
+        overridePendingTransition(R.anim.left_in, R.anim.left_out);
 
     }
 }

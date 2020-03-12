@@ -19,6 +19,7 @@ public class Intro3Activity extends AppCompatActivity {
     public void Empecemos(View view){
         Intent empecemos = new Intent(this, EmpecemosActivity.class);
         startActivity(empecemos);
+        overridePendingTransition(R.anim.zoom_back_in, R.anim.zoom_back_out);
     }
 
 }

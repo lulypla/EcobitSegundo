@@ -6,6 +6,8 @@
     android:layout_height="match_parent"
     tools:context=".Activities.Intro2Activity">
 
+
+
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="410dp"
@@ -30,4 +32,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.79" />
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

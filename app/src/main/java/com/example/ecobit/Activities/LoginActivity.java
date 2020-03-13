@@ -21,7 +21,7 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        UserService userService = APIService.getApi().create(UserService.class);
+        /*UserService userService = APIService.getApi().create(UserService.class);
 
         Call<User> userLogged =  userService.login("lucia","1234");
 
@@ -35,6 +35,6 @@ public class LoginActivity extends AppCompatActivity {
             public void onFailure(Call<User> call, Throwable t) {
                 Toast.makeText(LoginActivity.this,"error",Toast.LENGTH_LONG).show();
             }
-        });
+        });*/
     }
 }

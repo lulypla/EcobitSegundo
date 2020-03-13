@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
      //METODO Next para  btnnext
     public void Next(View view){
         startActivity(new Intent(this, Intro2Activity.class));
-        overridePendingTransition(R.anim.left_in, R.anim.left_out);
+        overridePendingTransition(R.anim.right_in, R.anim.rigth_out);
 
     }
 }

@@ -20,6 +20,6 @@ public class Intro2Activity extends AppCompatActivity {
     public void Next(View view){
         Intent next = new Intent(this, Intro3Activity.class);
         startActivity(next);
-        overridePendingTransition(R.anim.left_in, R.anim.left_out);
+        overridePendingTransition(R.anim.right_in, R.anim.rigth_out);
     }
 }

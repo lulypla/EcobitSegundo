@@ -2,7 +2,9 @@ package com.example.ecobit.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Toast;
 
 import com.example.ecobit.Model.User;
@@ -21,6 +23,14 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+    }
+        //METODO PpalUsuario
+        public void PpalUsuaro(View view) {
+            Intent iPpalUsuario = new Intent(this, PpalUsuarioActivity.class);
+            startActivity(iPpalUsuario);
+            overridePendingTransition(R.anim.zoom_back_in, R.anim.zoom_back_out);
+
+        }}
         /*UserService userService = APIService.getApi().create(UserService.class);
 
         Call<User> userLogged =  userService.login("lucia","1234");
@@ -36,5 +46,5 @@ public class LoginActivity extends AppCompatActivity {
                 Toast.makeText(LoginActivity.this,"error",Toast.LENGTH_LONG).show();
             }
         });*/
-    }
-}
+
+

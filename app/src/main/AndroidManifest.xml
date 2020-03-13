@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Activities.Intro3Activity"></activity>
+        <activity android:name=".Activities.PpalUsuarioActivity"></activity>
+        <activity android:name=".Activities.Intro3Activity" />
         <activity android:name=".Activities.Intro2Activity" />
         <activity android:name=".Activities.EmpecemosActivity" />
         <activity android:name=".Activities.registro2Activity" />

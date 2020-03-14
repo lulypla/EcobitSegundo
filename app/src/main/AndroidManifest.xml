@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.ecobit">
 
+    <uses-permission android:name="android.permission.INTERNET" />
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -13,12 +14,6 @@
         <activity android:name=".Activities.Intro3Activity" />
         <activity android:name=".Activities.Intro2Activity" />
         <activity android:name=".Activities.EmpecemosActivity" />
-        <activity android:name=".Activities.registro2Activity" />
-        <activity android:name=".Activities.registro1Activity" />
-        <activity android:name=".Activities.intro3Activity" />
-        <activity android:name=".Activities.intro2Activity" />
-        <activity android:name=".Activities.intro1Activity" />
-        <activity android:name=".intro1Activity" />
         <activity android:name=".Activities.RegistroActivity" />
         <activity android:name=".Activities.LoginActivity" />
         <activity android:name=".MainActivity">

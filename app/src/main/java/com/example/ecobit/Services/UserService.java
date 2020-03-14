@@ -5,19 +5,26 @@ import com.example.ecobit.Model.User;
 import java.util.List;
 
 import retrofit2.Call;
+import retrofit2.http.Body;
 import retrofit2.http.GET;
+import retrofit2.http.Header;
+import retrofit2.http.Headers;
 import retrofit2.http.POST;
 import retrofit2.http.Query;
 
 public interface UserService {
-    @GET("api/ecobit/user")
+    @GET("login")
     Call<User> user(@Query("userId") String userId);
 
     @GET("api/ecobit/user")
     Call<List<User>> getUsers();
 
-    @POST("api/ecobit/login")
-    Call<User> login(@Query("email") String email,@Query("pass") String pass);
+    //@POST("login")
+   // Call<User> login(@Query("email") String email,@Query("pass") String pass);
+
+    @POST("login")
+    Call<User> login(@Body User user);
+
 
     @POST("api/ecobit/signIn")
     Call<User> signIn(

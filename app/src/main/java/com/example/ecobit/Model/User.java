@@ -4,7 +4,7 @@ public class User {
 
         private static int id;
         private String email;
-        private String pass;
+        private String password;
         private String nombre;
         private String apellido;
         private String tipo_doc;
@@ -13,10 +13,10 @@ public class User {
         private String tel;
         private String foto;
 
-        public User(String email, String pass, String nombre, String apellido, String tipo_doc, String nro_documento, String fecha_nac, String tel, String foto) {
+        public User(String email, String password, String nombre, String apellido, String tipo_doc, String nro_documento, String fecha_nac, String tel, String foto) {
             this.id = id +1;
             this.email = email;
-            this.pass = pass;
+            this.password = password;
             this.nombre = nombre;
             this.apellido = apellido;
             this.tipo_doc = tipo_doc;
@@ -42,12 +42,12 @@ public class User {
         this.email = email;
     }
 
-    public String getPass() {
-        return pass;
+    public String getPassword() {
+        return password;
     }
 
-    public void setPass(String pass) {
-        this.pass = pass;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public String getNombre() {

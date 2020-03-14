@@ -5,7 +5,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class APIService {
 
-    public static final String BASE_URL = "http://api/ecobit/";
+    public static final String BASE_URL = "https://ecobits.herokuapp.com/api/v1/";
     private static Retrofit retrofit = null;
 
     public static Retrofit getApi(){

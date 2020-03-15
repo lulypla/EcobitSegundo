@@ -80,7 +80,8 @@ public class RegistroActivity extends AppCompatActivity {
                 && !cel.getText().toString().isEmpty() && !email.getText().toString().isEmpty()
                 && !pass.getText().toString().isEmpty() && !pass2.getText().toString().isEmpty()
         ){
-            if(textPass.getText().toString() == textPass2.getText().toString()){
+            if(textPass.getText().toString().equals(textPass2.getText().toString())){
+                Toast.makeText(this, "Procesando su registro...", Toast.LENGTH_SHORT).show();
                 return true;
             }
             else{

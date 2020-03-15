@@ -9,4 +9,5 @@
     <string name="textPass">Contraseña</string>
     <string name="textPass2">Repetir contraseña</string>
     <string name="textbtnRegistro">Registrarse</string>
+    <string name="atras">Ícono de forma de flecha hacia la izquierda para ir atrás</string>
 </resources>

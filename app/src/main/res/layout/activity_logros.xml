@@ -32,12 +32,13 @@
         app:layout_constraintTop_toTopOf="parent"/>
 
     <FrameLayout
-        android:layout_width="match_parent"
+        android:layout_width="345dp"
         android:layout_height="70dp"
         android:layout_marginTop="160dp"
-        android:background="@drawable/tarjetablanca"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:background="@drawable/logros_claro"
+        app:layout_constraintStart_toStartOf="@id/imageButtonHamburguesa"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_centerHorizontal="true">
 
         <TextView
             android:layout_width="wrap_content"
@@ -73,12 +74,12 @@
     </FrameLayout>
 
     <FrameLayout
-        android:layout_width="420dp"
+        android:layout_width="345dp"
         android:layout_height="70dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="240dp"
-        android:background="@drawable/tarjetablanca"
-        app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/logros_claro"
+        app:layout_constraintStart_toStartOf="@id/imageButtonHamburguesa"
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
@@ -115,12 +116,11 @@
     </FrameLayout>
 
     <FrameLayout
-        android:layout_width="420dp"
+        android:layout_width="345dp"
         android:layout_height="70dp"
-        android:layout_centerHorizontal="true"
         android:layout_marginTop="320dp"
-        android:background="@drawable/tarjetablanca"
-        app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/logros_oscuro"
+        app:layout_constraintStart_toStartOf="@id/imageButtonHamburguesa"
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
@@ -157,12 +157,11 @@
     </FrameLayout>
 
     <FrameLayout
-        android:layout_width="420dp"
+        android:layout_width="345dp"
         android:layout_height="70dp"
-        android:layout_centerHorizontal="true"
         android:layout_marginTop="400dp"
-        android:background="@drawable/tarjetablanca"
-        app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/logros_oscuro"
+        app:layout_constraintStart_toStartOf="@id/imageButtonHamburguesa"
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView

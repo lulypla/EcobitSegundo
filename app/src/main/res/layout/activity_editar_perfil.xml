@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.EditarPerfilActivity">
+
+    <ImageButton
+        android:id="@+id/imageButtonHamburguesa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="32dp"
+        android:contentDescription="@string/hamburguesa"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/hamburguesa"
+        android:onClick="IrPpalUsuario"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Editar Perfil"
+        android:textColor="#02a4a5"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:layout_marginTop="90dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+        android:layout_width="74dp"
+        android:layout_height="74dp"
+        android:id="@+id/imageViewPerfil"
+        android:background="@drawable/perfilxs"
+        android:layout_marginStart="293dp"
+        android:layout_marginTop="33dp"
+        android:contentDescription="Imagen de perfil del usuario."
+        android:layout_marginLeft="293dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/TextViewUser"
+        android:textSize="14sp"
+        android:textColor="#707070"
+        android:text="EDITAR"
+        android:layout_marginStart="307dp"
+        android:layout_marginTop="115dp"
+        android:layout_marginLeft="307dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="600dp"
+        android:id="@+id/card"
+        android:layout_marginTop="150dp"
+        android:background="@drawable/tarjetablanca"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textViewNombre"
+            android:text="Nombre"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#707070"
+            android:layout_marginTop="50dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginLeft="50dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <EditText
+            android:layout_width="270dp"
+            android:layout_height="40dp"
+            android:id="@+id/editTextNombre"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:textSize="16sp"
+            android:textColor="#707070"
+            android:background="#ddd"
+            android:text="Fulano"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="85dp"
+            android:inputType="text"
+            android:layout_marginLeft="35dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textViewApellido"
+            android:text="Apellido"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#707070"
+            android:layout_marginTop="135dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginLeft="50dp" />
+
+        <EditText
+            android:layout_width="270dp"
+            android:layout_height="40dp"
+            android:id="@+id/editTextApellido"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:textSize="16sp"
+            android:textColor="#707070"
+            android:background="#ddd"
+            android:text="De Tal"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="170dp"
+            android:inputType="text"
+            android:layout_marginLeft="35dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textViewEmail"
+            android:text="E-mail"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#707070"
+            android:layout_marginTop="220dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginLeft="50dp" />
+
+        <EditText
+            android:layout_width="270dp"
+            android:layout_height="40dp"
+            android:id="@+id/editTextEmail"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:textSize="16sp"
+            android:textColor="#707070"
+            android:background="#ddd"
+            android:text="fulano@gmail.com"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="255dp"
+            android:inputType="textEmailAddress"
+            android:layout_marginLeft="35dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textViewCelular"
+            android:text="Celular"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#707070"
+            android:layout_marginTop="305dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginLeft="50dp" />
+
+        <EditText
+            android:layout_width="270dp"
+            android:layout_height="40dp"
+            android:id="@+id/editTextCelular"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:textSize="16sp"
+            android:textColor="#707070"
+            android:background="#ddd"
+            android:text="099 123 456"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="340dp"
+            android:inputType="phone"
+            android:layout_marginLeft="35dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textViewNacimiento"
+            android:text="F. de Nac."
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#707070"
+            android:layout_marginTop="390dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginLeft="50dp" />
+
+        <DatePicker
+            android:layout_width="160dp"
+            android:layout_height="50dp"
+            android:id="@+id/CalendarViewFNac"
+            android:layout_marginTop="425dp"
+            android:layout_marginStart="50dp"
+            android:calendarViewShown="true"
+            android:datePickerMode="calendar"
+            android:dayOfWeekBackground="#02a4a5"
+            tools:targetApi="lollipop"
+            android:layout_marginLeft="50dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textViewSexo"
+            android:text="Sexo"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#707070"
+            android:layout_marginTop="390dp"
+            android:layout_marginStart="250dp"
+            android:layout_marginLeft="250dp" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:labelFor="@+id/radioButtonM"
+            android:layout_marginTop="425dp"
+            android:layout_marginStart="220dp"
+            android:layout_marginLeft="220dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioButtonM"
+            android:text="M"
+            android:layout_marginStart="230dp"
+            android:layout_marginTop="455dp"
+            android:layout_marginLeft="230dp" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:labelFor="@+id/radioButtonF"
+            android:layout_marginTop="425dp"
+            android:layout_marginStart="280dp"
+            android:layout_marginLeft="280dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioButtonF"
+            android:text="F"
+            android:layout_marginStart="260dp"
+            android:layout_marginTop="455dp"
+            android:layout_marginLeft="260dp" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:labelFor="@+id/radioButtonX"
+            android:layout_marginTop="425dp"
+            android:layout_marginStart="250dp"
+            android:layout_marginLeft="250dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioButtonX"
+            android:text="X"
+            android:layout_marginStart="290dp"
+            android:layout_marginTop="455dp"
+            android:layout_marginLeft="290dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/buttonGuardar"
+            android:layout_marginTop="475dp"
+            android:text="GUARDAR"
+            android:textColor="#fff"
+            android:textSize="21sp"
+            android:textStyle="bold"
+            android:background="@drawable/bottong"
+            app:srcCompat="@drawable/bottong"
+            android:onClick="IrPpalUsuario"
+            android:layout_gravity="center_horizontal" />
+
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

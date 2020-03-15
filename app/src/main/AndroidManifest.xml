@@ -3,6 +3,7 @@
     package="com.example.ecobit">
 
     <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,7 +11,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Activities.PpalUsuarioActivity"></activity>
+        <activity android:name=".Activities.MenuActivity"></activity>
+        <activity android:name=".Activities.EditarPerfilActivity" />
+        <activity android:name=".Activities.MisEcobitsActivity" />
+        <activity android:name=".Activities.LogrosActivity" />
+        <activity android:name=".Activities.PpalUsuarioActivity" />
         <activity android:name=".Activities.Intro3Activity" />
         <activity android:name=".Activities.Intro2Activity" />
         <activity android:name=".Activities.EmpecemosActivity" />

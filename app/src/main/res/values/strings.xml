@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Ecobit</string>
+    <string name="hamburguesa">Ícono representado por tres líneas horizontales para acceder al menú.</string>
 </resources>

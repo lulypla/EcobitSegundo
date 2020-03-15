@@ -2,7 +2,9 @@ package com.example.ecobit.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Toast;
 
 import com.example.ecobit.Model.User;
@@ -37,5 +39,12 @@ public class RegistroActivity extends AppCompatActivity {
                 Toast.makeText(RegistroActivity.this,"error",Toast.LENGTH_LONG).show();
             }
         });
+
+    }
+
+    // volver a
+    public void VolverAEmpecemos(View view){
+        Intent intent = new Intent(this, EmpecemosActivity.class);
+        startActivity(intent);
     }
 }

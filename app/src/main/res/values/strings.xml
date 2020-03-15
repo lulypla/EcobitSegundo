@@ -1,4 +1,12 @@
 <resources>
     <string name="app_name">Ecobit</string>
     <string name="hamburguesa">Ícono representado por tres líneas horizontales para acceder al menú.</string>
+    <string name="textRegistro">Registro</string>
+    <string name="textNombre">Nombre</string>
+    <string name="textApellido">Apellido</string>
+    <string name="textCelular">Celular</string>
+    <string name="textEmail">E-mail</string>
+    <string name="textPass">Contraseña</string>
+    <string name="textPass2">Repetir contraseña</string>
+    <string name="textbtnRegistro">Registrarse</string>
 </resources>

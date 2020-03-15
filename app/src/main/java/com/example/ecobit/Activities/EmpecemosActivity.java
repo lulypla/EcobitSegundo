@@ -26,6 +26,12 @@ public class EmpecemosActivity extends AppCompatActivity {
             overridePendingTransition(R.anim.zoom_back_in, R.anim.zoom_back_out);
         }
 
+    // Ir al activity registro
+    public void IrRegistro(View view){
+        Intent intent = new Intent(this, RegistroActivity.class);
+        startActivity(intent);
+    }
+
 
 
 }

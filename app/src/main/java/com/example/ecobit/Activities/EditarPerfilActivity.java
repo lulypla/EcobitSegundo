@@ -17,12 +17,6 @@ public class EditarPerfilActivity extends AppCompatActivity {
         setContentView(R.layout.activity_editar_perfil);
     }
 
-    public void IrMenu(View view) {
-        Intent menu = new Intent(this, MenuActivity.class);
-        startActivity(menu);
-        overridePendingTransition(R.anim.zoom_back_in, R.anim.zoom_back_out);
-    }
-
     public void IrPpalUsuario(View view) {
         Intent irPpalUsuario = new Intent(this, PpalUsuarioActivity.class);
         startActivity(irPpalUsuario);

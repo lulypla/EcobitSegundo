@@ -39,10 +39,10 @@
         android:background="@drawable/perfilxs"
         android:layout_marginStart="293dp"
         android:layout_marginTop="33dp"
-        android:contentDescription="Imagen de perfil del usuario."
+        android:contentDescription="@string/perfil"
         android:layout_marginLeft="293dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -55,7 +55,7 @@
         android:layout_marginTop="115dp"
         android:layout_marginLeft="307dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <FrameLayout
         android:layout_width="match_parent"

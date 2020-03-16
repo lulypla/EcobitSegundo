@@ -16,7 +16,8 @@
         android:contentDescription="@string/hamburguesa"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/hamburguesa" />
+        app:srcCompat="@drawable/hamburguesa"
+        android:onClick="IrMenu"/>
 
     <TextView
         android:layout_width="wrap_content"

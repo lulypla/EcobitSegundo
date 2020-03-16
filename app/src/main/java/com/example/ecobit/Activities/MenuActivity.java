@@ -26,10 +26,17 @@ public class MenuActivity extends AppCompatActivity {
         overridePendingTransition(R.anim.zoom_back_in, R.anim.zoom_back_out);
     }
 
-    //METODO IrEditarPerfil
-    public void IrEditarPerfil(View view) {
-        Intent irEditarPerfil = new Intent(this, EditarPerfilActivity.class);
-        startActivity(irEditarPerfil);
+    //METODO IrMiCuenta para ir ver las opciones de la cuenta
+    public void IrMiCuenta(View view) {
+        Intent irMiCuenta = new Intent(this, MiCuentaActivity.class);
+        startActivity(irMiCuenta);
+        overridePendingTransition(R.anim.zoom_back_in, R.anim.zoom_back_out);
+    }
+
+    //METODO IrMiPerfil
+    public void IrMiPerfil(View view) {
+        Intent irMiPerfil = new Intent(this, MiPerfilActivity.class);
+        startActivity(irMiPerfil);
         overridePendingTransition(R.anim.zoom_back_in, R.anim.zoom_back_out);
     }
 
@@ -39,4 +46,13 @@ public class MenuActivity extends AppCompatActivity {
         startActivity(irMisEcobits);
         overridePendingTransition(R.anim.zoom_back_in, R.anim.zoom_back_out);
     }
+
+    //METODO IrLogros
+    public void IrLogros(View view) {
+        Intent irLogros = new Intent(this, LogrosActivity.class);
+        startActivity(irLogros);
+        overridePendingTransition(R.anim.zoom_back_in, R.anim.zoom_back_out);
+    }
+
+
 }

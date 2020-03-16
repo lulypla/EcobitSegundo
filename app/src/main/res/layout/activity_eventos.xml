@@ -1,0 +1,181 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.EventosActivity">
+
+    <ImageButton
+        android:id="@+id/imageButtonHamburguesa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="32dp"
+        android:contentDescription="@string/hamburguesa"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/hamburguesa"
+        android:onClick="IrMenu"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textViewEventos"
+        android:text="Eventos"
+        android:textColor="#02a4a5"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:layout_marginTop="90dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <FrameLayout
+        android:layout_width="345dp"
+        android:layout_height="170dp"
+        android:layout_marginTop="200dp"
+        android:background="@drawable/logros_claro"
+        app:layout_constraintStart_toStartOf="@id/imageButtonHamburguesa"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sorteo de Carnaval"
+            android:textColor="#707070"
+            android:textSize="21sp"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginLeft="25dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Participá hasta el 24/02/2020"
+            android:textColor="#707070"
+            android:textSize="12sp"
+            android:layout_marginTop="45dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginLeft="25dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Canjeá tu cupón para participar del sorte por un\n\fin de semana para dos en el Hotel Menecucho"
+            android:textColor="#707070"
+            android:textSize="12sp"
+            android:layout_marginTop="70dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginLeft="25dp" />
+
+        <Button
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/buttonCanjearCupon"
+            android:layout_marginTop="110dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginStart="50dp"
+            android:text="CANJEAR CUPÓN"
+            android:textColor="#fff"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:background="@drawable/boton"
+            app:srcCompat="@drawable/boton" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="345dp"
+        android:layout_height="140dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="380dp"
+        android:background="@drawable/logros_claro"
+        app:layout_constraintStart_toStartOf="@id/imageButtonHamburguesa"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Maratón de Recciclaje"
+            android:textColor="#707070"
+            android:textSize="21sp"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginLeft="25dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="El evento finaliza el día 29/02/2020"
+            android:textColor="#707070"
+            android:textSize="12sp"
+            android:layout_marginTop="45dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginLeft="25dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Llevas 327/500 envases plásticos."
+            android:textColor="#707070"
+            android:textSize="12sp"
+            android:layout_marginTop="70dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginLeft="25dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ayuda a reciclar 173 envases más para poder\n\reclamar tu premio."
+            android:textColor="#707070"
+            android:textSize="12sp"
+            android:layout_marginTop="85dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginLeft="25dp" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="345dp"
+        android:layout_height="142dp"
+        android:layout_marginTop="530dp"
+        android:background="@drawable/logros_gris"
+        app:layout_constraintStart_toStartOf="@id/imageButtonHamburguesa"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Semana del Plástico"
+            android:textColor="#707070"
+            android:textSize="21sp"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginLeft="25dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Evento Terminado"
+            android:textColor="#707070"
+            android:textSize="12sp"
+            android:layout_marginTop="45dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginLeft="25dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="¡Felicitaciones! Quedaste en la posición 27 del ranking.\n\Ayudaste a reciclar 114 kg de plástico y conseguiste\n\320 EcoBits adicionales."
+            android:textColor="#707070"
+            android:textSize="12sp"
+            android:layout_marginTop="70dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginLeft="25dp" />
+
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

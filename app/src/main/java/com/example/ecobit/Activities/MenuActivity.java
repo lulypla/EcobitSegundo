@@ -54,5 +54,10 @@ public class MenuActivity extends AppCompatActivity {
         overridePendingTransition(R.anim.zoom_back_in, R.anim.zoom_back_out);
     }
 
-
+    //METODO IrEventos
+    public void IrEventos(View view) {
+        Intent irEventos = new Intent(this, EventosActivity.class);
+        startActivity(irEventos);
+        overridePendingTransition(R.anim.zoom_back_in, R.anim.zoom_back_out);
+    }
 }

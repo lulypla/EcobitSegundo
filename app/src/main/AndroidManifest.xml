@@ -11,7 +11,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Activities.MiPerfilActivity"></activity>
+        <activity android:name=".Activities.AyudaActivity"></activity>
+        <activity android:name=".Activities.SobreEcobitsActivity" />
+        <activity android:name=".Activities.EventosActivity" />
+        <activity android:name=".Activities.MiPerfilActivity" />
         <activity android:name=".Activities.MiCuentaActivity" />
         <activity android:name=".Activities.MenuActivity" />
         <activity android:name=".Activities.EditarPerfilActivity" />

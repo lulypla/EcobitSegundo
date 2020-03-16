@@ -40,19 +40,7 @@
         android:layout_marginLeft="70dp"
         android:layout_marginStart="70dp"
         android:layout_marginTop="110dp"
-        android:onClick="IrEditarPerfil"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Logros"
-        android:textColor="#707070"
-        android:textSize="30sp"
-        android:layout_marginLeft="70dp"
-        android:layout_marginStart="70dp"
-        android:layout_marginTop="170dp"
+        android:onClick="IrMiPerfil"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
 
@@ -64,8 +52,21 @@
         android:textSize="30sp"
         android:layout_marginLeft="70dp"
         android:layout_marginStart="70dp"
+        android:layout_marginTop="170dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:onClick="IrMisEcobits"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Logros"
+        android:textColor="#707070"
+        android:textSize="30sp"
+        android:layout_marginLeft="70dp"
+        android:layout_marginStart="70dp"
         android:layout_marginTop="230dp"
-        android:onClick="IrMisEcobits"
+        android:onClick="IrLogros"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
 
@@ -103,7 +104,8 @@
         android:layout_marginStart="70dp"
         android:layout_marginTop="410dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent"
+        android:onClick="IrEventos"/>
 
     <TextView
         android:layout_width="wrap_content"

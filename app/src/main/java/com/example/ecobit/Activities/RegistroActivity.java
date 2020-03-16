@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.ecobit.Model.User;
@@ -17,6 +18,14 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class RegistroActivity extends AppCompatActivity {
+
+    // declaramos los campos de registro
+    private EditText textNombre;
+    private EditText textApellido;
+    private EditText textEmail;
+    private EditText textCel;
+    private EditText textPass;
+    private EditText textPass2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,9 +51,48 @@ public class RegistroActivity extends AppCompatActivity {
 
     }
 
-    // volver a
+    // volver a el activity de Emprecemos
     public void VolverAEmpecemos(View view){
         Intent intent = new Intent(this, EmpecemosActivity.class);
         startActivity(intent);
+    }
+    // Registro
+    public void Registro(View view){
+        // los inputs
+        textNombre = (EditText)findViewById(R.id.editNombre);
+        textApellido = (EditText)findViewById(R.id.editApellido);
+        textEmail = (EditText)findViewById(R.id.editEmail);
+        textCel = (EditText)findViewById(R.id.editCelular);
+        textPass = (EditText)findViewById(R.id.editPass);
+        textPass2 = (EditText)findViewById(R.id.editPass2);
+        if(ComprobarCampos(textNombre, textApellido, textCel, textEmail, textPass, textPass2)){
+            if(textPass.toString() == textPass2.toString()){
+                // acá iría el insert
+                Toast.makeText(this, "Registro en proceso....", Toast.LENGTH_SHORT).show();
+            }
+
+        }
+        
+    }
+    // compruba que los campos de registro no esten vacios
+    public boolean ComprobarCampos(EditText nombre, EditText apellido, EditText cel, EditText email, EditText pass, EditText pass2){
+        if(!nombre.getText().toString().isEmpty() && !apellido.getText().toString().isEmpty()
+                && !cel.getText().toString().isEmpty() && !email.getText().toString().isEmpty()
+                && !pass.getText().toString().isEmpty() && !pass2.getText().toString().isEmpty()
+        ){
+            if(textPass.getText().toString().equals(textPass2.getText().toString())){
+                Toast.makeText(this, "Procesando su registro...", Toast.LENGTH_SHORT).show();
+                return true;
+            }
+            else{
+                Toast.makeText(this, "Las contraseñas no coinciden", Toast.LENGTH_SHORT).show();
+            }
+
+        }
+        else{
+            Toast.makeText(this, "Ingresa la información en todos los campos", Toast.LENGTH_LONG).show();
+            return false;
+        }
+        return false;
     }
 }

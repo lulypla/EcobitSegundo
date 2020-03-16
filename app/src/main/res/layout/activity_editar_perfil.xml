@@ -49,7 +49,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/TextViewUser"
         android:textSize="14sp"
-        android:textColor="#02a4a5"
+        android:textColor="#68b3f5"
         android:text="EDITAR"
         android:layout_marginStart="307dp"
         android:layout_marginTop="115dp"

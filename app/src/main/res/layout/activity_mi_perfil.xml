@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.PpalUsuarioActivity">
+
+    <ImageView
+        android:id="@+id/imageViewFondo"
+        android:layout_width="match_parent"
+        android:layout_height="504dp"
+        android:layout_marginBottom="420dp"
+        app:srcCompat="@drawable/fndocurvo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <ImageButton
+        android:id="@+id/imageButtonMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/hambwhite" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mi Perfil"
+        android:textColor="#fff"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:layout_marginTop="90dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:id="@+id/imageViewPerfil"
+        android:background="@drawable/perfilxs"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="33dp"
+        android:contentDescription="Imagen de perfil del usuario."
+        android:layout_marginRight="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="330dp"
+        android:id="@+id/card1"
+        android:layout_marginTop="150dp"
+        android:background="@drawable/tarjetablanca"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textViewUserName"
+            android:text="Fulano de Tal"
+            android:textSize="26sp"
+            android:textColor="#02a4a5"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginStart="50dp"/>
+
+        <View
+            android:id="@+id/divider1"
+            android:layout_width="300dp"
+            android:layout_height="1dp"
+            android:background="#dbefee"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="87dp"
+            android:layout_marginStart="-7dp"
+            android:layout_marginLeft="-7dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textViewUserAge"
+            android:text="35 años"
+            android:textSize="24sp"
+            android:textColor="#707070"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="110dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginStart="50dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textViewUserMail"
+            android:text="fulano@gmail.com"
+            android:textSize="24sp"
+            android:textColor="#707070"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="160dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginStart="50dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textViewUserCel"
+            android:text="099123456"
+            android:textSize="24sp"
+            android:textColor="#707070"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="210dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginStart="50dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textViewEditar"
+            android:text="Editar"
+            android:textSize="24sp"
+            android:textColor="#68b3f5"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="260dp"
+            android:layout_marginLeft="200dp"
+            android:layout_marginStart="280dp"/>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:id="@+id/card"
+        android:layout_marginTop="470dp"
+        android:background="@drawable/tarjetablanca"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textViewNumEnvRec"
+            android:text="1457"
+            android:textSize="26sp"
+            android:textColor="#02a4a5"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginStart="50dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textViewNumEcobitsGen"
+            android:text="2185"
+            android:textSize="26sp"
+            android:textColor="#02a4a5"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="160dp"
+            android:layout_marginStart="160dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textViewUserNumLogrosComp"
+            android:text="12"
+            android:textSize="26sp"
+            android:textColor="#02a4a5"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="270dp"
+            android:layout_marginStart="270dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textViewEnvasesReciclados"
+            android:text="ENVASES\n\RECICLADOS"
+            android:textSize="14sp"
+            android:textColor="#707070"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="65dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginStart="50dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textViewEcobitsGenerados"
+            android:text="ECOBITS\n\GENERADOS"
+            android:textSize="14sp"
+            android:textColor="#707070"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="65dp"
+            android:layout_marginLeft="150dp"
+            android:layout_marginStart="150dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textViewLogrosCompletados"
+            android:text="LOGROS\n\COMPLETADOS"
+            android:textSize="14sp"
+            android:textColor="#707070"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="65dp"
+            android:layout_marginLeft="248dp"
+            android:layout_marginStart="248dp" />
+
+        <View
+            android:id="@+id/divider2"
+            android:layout_width="300dp"
+            android:layout_height="1dp"
+            android:background="#dbefee"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="122dp"
+            android:layout_marginStart="-7dp"
+            android:layout_marginLeft="-7dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textViewColaborador"
+            android:text="COLABORADOR"
+            android:textSize="16sp"
+            android:textColor="#707070"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="150dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginStart="50dp"
+            android:gravity="center_horizontal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textViewUserNivel"
+            android:text="GOLD"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:textColor="#f3bf17"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="170dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginStart="50dp"
+            android:gravity="center_horizontal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textViewUsuarioDesde"
+            android:text="Usuario desde:"
+            android:textSize="16sp"
+            android:textColor="#707070"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="150dp"
+            android:layout_marginLeft="245dp"
+            android:layout_marginStart="245dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textViewFechaRegistro"
+            android:text="25/10/2019"
+            android:textSize="21sp"
+            android:textStyle="bold"
+            android:textColor="#707070"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="170dp"
+            android:layout_marginLeft="235dp"
+            android:layout_marginStart="235dp" />
+
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

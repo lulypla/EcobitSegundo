@@ -1,6 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.SobreEcobitsActivity">
+
+    <ImageButton
+        android:id="@+id/imageButtonAtras"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="32dp"
+        android:contentDescription="@string/atras"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/hamburguesa"
+        android:onClick="IrMenu"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sobre EcoBits"
+        android:textColor="#02a4a5"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:layout_marginTop="90dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="590dp"
+        android:id="@+id/card"
+        android:layout_marginTop="150dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/tarjetablanca"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="EcoBits es un sistema de incentivos\n\de reciclaje, que beneficia a toda\n\la sociedad.\n\
+            \n\Nace en el año 2019 producto de un \n\proyecto académico, con el objetivo\n\de generar cambios positivos en\n\el comportamiento de los\n\ciudadanos, que a su vez repercute\n\con grandes beneficios a nivel\n\ambiental y sanitario.\n\
+\n\Ingresá a nuestra página para\n\obtener más información.\n\
+\n\También nos podés seguir a través\n\de nuestras redes sociales para\n\ayudarnos a difundir el mensaje y\n\ser parte del cambio."
+            android:textColor="#707070"
+            android:textSize="19sp"
+            android:layout_marginTop="50dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginLeft="50dp"/>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/redes"
+            android:layout_marginTop="500dp"
+            android:layout_marginLeft="140dp"
+            android:layout_marginStart="140dp"/>
+
+    </FrameLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

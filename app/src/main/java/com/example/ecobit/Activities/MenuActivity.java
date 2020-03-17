@@ -54,10 +54,31 @@ public class MenuActivity extends AppCompatActivity {
         overridePendingTransition(R.anim.zoom_back_in, R.anim.zoom_back_out);
     }
 
-    //METODO IrEventos
+    //METODO IrCanjear para ir a Canjear EcoBits
+    public void IrCanjear(View view) {
+        Intent irCanjear = new Intent(this, CanjearEcobitsActivity.class);
+        startActivity(irCanjear);
+        overridePendingTransition(R.anim.zoom_back_in, R.anim.zoom_back_out);
+    }
+
+    //METODO IrEventos para ver los eventos y sorteos
     public void IrEventos(View view) {
         Intent irEventos = new Intent(this, EventosActivity.class);
         startActivity(irEventos);
+        overridePendingTransition(R.anim.zoom_back_in, R.anim.zoom_back_out);
+    }
+
+    //METODO IrSobreEcobits
+    public void IrSobreEcobits(View view) {
+        Intent irSobreEcobits = new Intent(this, SobreEcobitsActivity.class);
+        startActivity(irSobreEcobits);
+        overridePendingTransition(R.anim.zoom_back_in, R.anim.zoom_back_out);
+    }
+
+    //METODO IrAyuda
+    public void IrAyuda(View view) {
+        Intent irAyuda = new Intent(this, AyudaActivity.class);
+        startActivity(irAyuda);
         overridePendingTransition(R.anim.zoom_back_in, R.anim.zoom_back_out);
     }
 }

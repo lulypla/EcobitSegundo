@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -25,11 +26,12 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
     }
+
     //METODO PpalUsuario
     public void PpalUsuaro(View view) {
         final EditText email = (EditText) findViewById(R.id.editTextEmail);
         final EditText password = (EditText) findViewById(R.id.editTextPass);
-        User user = new User (
+        User user = new User(
                 email.getText().toString(),
                 password.getText().toString(),
                 null,
@@ -41,36 +43,30 @@ public class LoginActivity extends AppCompatActivity {
                 null
         );
         UserService userService = APIService.getApi().create(UserService.class);
-        Call<User> userLogged =  userService.login(user);
+        Call<User> userLogged = userService.login(user);
+        final Intent iPpalUsuario = new Intent(this, PpalUsuarioActivity.class);
         userLogged.enqueue(new Callback<User>() {
             @Override
             public void onResponse(Call<User> call, Response<User> response) {
                 User user = response.body();
+                if (user != null && user.getEmail() != null) {
+                    iPpalUsuario.putExtra("usuario", user);
+                    startActivity(iPpalUsuario);
+                    overridePendingTransition(R.anim.zoom_back_in, R.anim.zoom_back_out);
+                } else {
+                    Toast.makeText(LoginActivity.this, "Error contraseña o email incorrectos", Toast.LENGTH_LONG).show();
+
+                }
             }
+
             @Override
             public void onFailure(Call<User> call, Throwable t) {
-                Toast.makeText(LoginActivity.this,"error",Toast.LENGTH_LONG).show();
+                Toast.makeText(LoginActivity.this, "Error en Pedido, Compruebe su conexion a internet", Toast.LENGTH_LONG).show();
             }
         });
-        //Intent iPpalUsuario = new Intent(this, PpalUsuarioActivity.class);
-        //startActivity(iPpalUsuario);
-        //overridePendingTransition(R.anim.zoom_back_in, R.anim.zoom_back_out);
+
     }
 }
-        /*UserService userService = APIService.getApi().create(UserService.class);
 
-        Call<User> userLogged =  userService.login("lucia","1234");
-
-        userLogged.enqueue(new Callback<User>() {
-            @Override
-            public void onResponse(Call<User> call, Response<User> response) {
-                User user = response.body();
-            }
-
-            @Override
-            public void onFailure(Call<User> call, Throwable t) {
-                Toast.makeText(LoginActivity.this,"error",Toast.LENGTH_LONG).show();
-            }
-        });*/
 
 

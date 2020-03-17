@@ -1,6 +1,8 @@
 package com.example.ecobit.Model;
 
-public class User {
+import java.io.Serializable;
+
+public class User implements Serializable {
 
         private static int id;
         private String email;

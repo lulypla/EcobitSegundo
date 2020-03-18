@@ -2,6 +2,7 @@ package com.example.ecobit.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.accessibilityservice.GestureDescription;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -20,38 +21,25 @@ import retrofit2.Response;
 public class RegistroActivity extends AppCompatActivity {
 
     // declaramos los campos de registro
-    private EditText textNombre;
-    private EditText textApellido;
-    private EditText textEmail;
-    private EditText textCel;
-    private EditText textPass;
+    private EditText nombre;
+    private EditText apellido;
+    private EditText email;
+    private EditText tel;
+    private EditText password;
     private EditText textPass2;
+    String fecha_nac;
+    String nro_doc;
+    String tipo_doc;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registro);
+   }
 
 
-        UserService userService = APIService.getApi().create(UserService.class);
-
-        Call<User> userRegistiry =  userService.signIn("lucia@ecobit.com", "1234", "lucia", "nassutti", "CI","123456789", "28/03/1989", "09837", "");
-
-        userRegistiry.enqueue(new Callback<User>() {
-            @Override
-            public void onResponse(Call<User> call, Response<User> response) {
-                User user = response.body();
-            }
-
-            @Override
-            public void onFailure(Call<User> call, Throwable t) {
-                Toast.makeText(RegistroActivity.this,"error",Toast.LENGTH_LONG).show();
-            }
-        });
-
-    }
-
-    // volver a el activity de Emprecemos
+        // volver a el activity de Emprecemos
     public void VolverAEmpecemos(View view){
         Intent intent = new Intent(this, EmpecemosActivity.class);
         startActivity(intent);
@@ -59,28 +47,71 @@ public class RegistroActivity extends AppCompatActivity {
     // Registro
     public void Registro(View view){
         // los inputs
-        textNombre = (EditText)findViewById(R.id.editNombre);
-        textApellido = (EditText)findViewById(R.id.editApellido);
-        textEmail = (EditText)findViewById(R.id.editEmail);
-        textCel = (EditText)findViewById(R.id.editCelular);
-        textPass = (EditText)findViewById(R.id.editPass);
+        nombre = (EditText)findViewById(R.id.editNombre);
+        apellido = (EditText)findViewById(R.id.editApellido);
+        email = (EditText)findViewById(R.id.editEmail);
+        tel = (EditText)findViewById(R.id.editCelular);
+        password= (EditText)findViewById(R.id.editPass);
         textPass2 = (EditText)findViewById(R.id.editPass2);
-        if(ComprobarCampos(textNombre, textApellido, textCel, textEmail, textPass, textPass2)){
-            if(textPass.toString() == textPass2.toString()){
+        if(ComprobarCampos(nombre, apellido, tel, email, password, textPass2)){
+            //if(textPass.toString() == textPass2.toString()) {
                 // acá iría el insert
-                Toast.makeText(this, "Registro en proceso....", Toast.LENGTH_SHORT).show();
-            }
+                User user = new User(
+                        email.getText().toString(),
+                        password.getText().toString(),
+                        nombre.getText().toString(),
+                        apellido.getText().toString(),
+                        null,
+                        null,
+                        null,
+                        tel.getText().toString(),
+                        null);
 
-        }
-        
-    }
+                        Insert(user);
+
+            }
+          //Toast.makeText(this, "Registro en proceso....", Toast.LENGTH_SHORT).show();
+     }
+
+     public void Insert(User user){
+
+         String prueba = user.getEmail();
+         Toast.makeText(this, "Registro"+ prueba, Toast.LENGTH_SHORT).show();
+
+         UserService userService = APIService.getApi().create(UserService.class);
+
+         Call<User> userRegistrado = userService.registro(user);
+         userRegistrado.enqueue(new Callback<User>(){
+             @Override
+             public void onResponse(Call<User> call, Response<User> response) {
+                 User user = response.body();
+                 if (user != null && user.getEmail() != null) {
+                     Toast.makeText(RegistroActivity.this, "bien", Toast.LENGTH_LONG).show();
+                 }
+
+             }
+
+             @Override
+             public void onFailure(Call<User> call, Throwable t) {
+                 Toast.makeText(RegistroActivity.this, "error", Toast.LENGTH_LONG).show();
+             }
+         });
+     }
+
+
+
+
+
+
+
+
     // compruba que los campos de registro no esten vacios
     public boolean ComprobarCampos(EditText nombre, EditText apellido, EditText cel, EditText email, EditText pass, EditText pass2){
         if(!nombre.getText().toString().isEmpty() && !apellido.getText().toString().isEmpty()
                 && !cel.getText().toString().isEmpty() && !email.getText().toString().isEmpty()
                 && !pass.getText().toString().isEmpty() && !pass2.getText().toString().isEmpty()
         ){
-            if(textPass.getText().toString().equals(textPass2.getText().toString())){
+            if(password.getText().toString().equals(textPass2.getText().toString())){
                 Toast.makeText(this, "Procesando su registro...", Toast.LENGTH_SHORT).show();
                 return true;
             }

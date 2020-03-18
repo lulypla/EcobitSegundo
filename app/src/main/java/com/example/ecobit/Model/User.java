@@ -1,5 +1,7 @@
 package com.example.ecobit.Model;
 
+import android.widget.EditText;
+
 import java.io.Serializable;
 
 public class User implements Serializable {
@@ -27,6 +29,8 @@ public class User implements Serializable {
             this.tel = tel;
             this.foto = foto;
         }
+
+
 
     public static int getId() {
         return id;

@@ -7,88 +7,98 @@
     tools:context=".Activities.PpalUsuarioActivity">
 
     <ImageView
-        android:id="@+id/imageView5"
+        android:id="@+id/imageViewFondo"
         android:layout_width="552dp"
         android:layout_height="504dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.567"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/fndocurvo" />
+        app:srcCompat="@drawable/fndocurvo"/>
 
-    <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <Button
+        android:id="@+id/btnMenu"
+        android:layout_width="45dp"
+        android:layout_height="32dp"
         android:layout_marginStart="32dp"
         android:layout_marginLeft="32dp"
         android:layout_marginTop="32dp"
+        android:background="@drawable/hambwhite"
+        android:onClick="IrMenu"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView5"
-        app:srcCompat="@drawable/hambwhite"
-        android:onClick="IrMenu"/>
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <ImageView
         android:id="@+id/imageViewPerfil"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
-        app:srcCompat="@drawable/perfilxl"
-        android:layout_marginTop="130dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewFondo"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
-
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="match_parent"
-        android:layout_height="33dp"
-        android:layout_marginTop="350dp"
-        android:fontFamily="@font/pmedium"
-        android:text="Nombre "
-        android:textAlignment="center"
-        android:textColor="@color/colorBackgroundW"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:gravity="center_horizontal" />
+        app:srcCompat="@drawable/perfilxl"/>
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginBottom="32dp"
-        android:background="@drawable/mas"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+    <TextView
+        android:id="@+id/textViewNombre"
+        android:layout_width="match_parent"
+        android:layout_height="33dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/pmedium"
+        android:gravity="center_horizontal"
+        android:textAlignment="center"
+        android:textColor="#FFFF"
+        android:text="Será ahora?"
+        android:textSize="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewPerfil"/>
 
     <TextView
         android:id="@+id/textView7"
         android:layout_width="match_parent"
-        android:textAlignment="center"
         android:layout_height="39dp"
-        android:layout_marginTop="170dp"
         android:fontFamily="@font/pl"
+        android:gravity="center_horizontal"
         android:text="Tu saldo es de:"
+        android:textAlignment="center"
         android:textColor="#0C918A"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6"
-        android:gravity="center_horizontal" />
+        app:layout_constraintTop_toBottomOf="@+id/imageViewFondo"/>
+
+    <TextView
+        android:id="@+id/textViewSaldo"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:fontFamily="@font/psemibold"
+        android:textSize="30dp"
+        android:textColor="#0C918A"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView7"/>
 
     <TextView
         android:id="@+id/textView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="75dp"
         android:text="EcoBits"
         android:textColor="#0C918A"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewSaldo"/>
 
+    <Button
+        android:id="@+id/btnSumarCredito"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/mas"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

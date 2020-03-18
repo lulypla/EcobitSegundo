@@ -1,15 +1,21 @@
 package com.example.ecobit.Services;
 
+import android.widget.EditText;
+
 import com.example.ecobit.Model.User;
 
 import java.util.List;
+import java.util.Map;
 
 import retrofit2.Call;
 import retrofit2.http.Body;
+import retrofit2.http.Field;
+import retrofit2.http.FieldMap;
 import retrofit2.http.GET;
 import retrofit2.http.Header;
 import retrofit2.http.Headers;
 import retrofit2.http.POST;
+import retrofit2.http.Part;
 import retrofit2.http.Query;
 
 public interface UserService {
@@ -25,16 +31,18 @@ public interface UserService {
     @POST("login")
     Call<User> login(@Body User user);
 
+    @POST("registro")
+    Call<User> registro(@Body User user);
 
-    @POST("api/ecobit/signIn")
-    Call<User> signIn(
-            @Query("email") String email,
-            @Query("pass") String pass,
-            @Query("nombre") String nombre,
-            @Query("apellido") String apellido,
-            @Query("tipo_doc") String tipo_doc,
-            @Query("nro_documento") String nro_documento,
-            @Query("fecha_nac") String fecha_nac,
-            @Query("tel") String tel,
-            @Query("foto") String foto);
+    @POST("registro")
+    Call<User> signI2(
+            @Field("email") EditText email,
+            @Field("password") EditText pass,
+            @Field("nombre") EditText nombre,
+            @Field("apellido") EditText apellido,
+            @Field("tel") EditText tel,
+            @Field("nro_doc") String nro_documento,
+            @Field("tipo_doc") String tipo_doc,
+            @Field("fecha_nac") String fecha_nac);
+
 }

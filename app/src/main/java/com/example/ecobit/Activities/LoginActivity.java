@@ -26,11 +26,12 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-
+        Toast.makeText(LoginActivity.this, "Ingrese su usuario y contraseña", Toast.LENGTH_LONG).show();
     }
 
     //METODO PpalUsuario
     public void PpalUsuaro(View view) {
+
         final EditText email = (EditText) findViewById(R.id.editTextEmail);
         final EditText password = (EditText) findViewById(R.id.editTextPass);
         User user = new User(

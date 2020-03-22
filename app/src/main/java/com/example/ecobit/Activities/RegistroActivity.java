@@ -70,23 +70,23 @@ public class RegistroActivity extends AppCompatActivity {
                         Insert(user);
 
             }
-          //Toast.makeText(this, "Registro en proceso....", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Registro en proceso....", Toast.LENGTH_SHORT).show();
      }
 
      public void Insert(User user){
 
-         String prueba = user.getEmail();
-         Toast.makeText(this, "Registro"+ prueba, Toast.LENGTH_SHORT).show();
-
-         UserService userService = APIService.getApi().create(UserService.class);
-
+        UserService userService = APIService.getApi().create(UserService.class);
          Call<User> userRegistrado = userService.registro(user);
          userRegistrado.enqueue(new Callback<User>(){
              @Override
              public void onResponse(Call<User> call, Response<User> response) {
                  User user = response.body();
-                 if (user != null && user.getEmail() != null) {
-                     Toast.makeText(RegistroActivity.this, "bien", Toast.LENGTH_LONG).show();
+                if (user != null && user.getEmail() != null) {
+                    Toast.makeText(RegistroActivity.this, "Registro realizado con éxito", Toast.LENGTH_LONG).show();
+                    final Intent alLogin = new Intent(RegistroActivity.this, LoginActivity.class);
+                    startActivity(alLogin);
+
+
                  }
 
              }
@@ -99,12 +99,6 @@ public class RegistroActivity extends AppCompatActivity {
      }
 
 
-
-
-
-
-
-
     // compruba que los campos de registro no esten vacios
     public boolean ComprobarCampos(EditText nombre, EditText apellido, EditText cel, EditText email, EditText pass, EditText pass2){
         if(!nombre.getText().toString().isEmpty() && !apellido.getText().toString().isEmpty()
@@ -112,7 +106,7 @@ public class RegistroActivity extends AppCompatActivity {
                 && !pass.getText().toString().isEmpty() && !pass2.getText().toString().isEmpty()
         ){
             if(password.getText().toString().equals(textPass2.getText().toString())){
-                Toast.makeText(this, "Procesando su registro...", Toast.LENGTH_SHORT).show();
+               Toast.makeText(this, "Procesando su registro...", Toast.LENGTH_SHORT).show();
                 return true;
             }
             else{

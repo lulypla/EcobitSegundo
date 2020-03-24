@@ -15,8 +15,12 @@ import android.widget.Toast;
 
 import com.example.ecobit.Model.User;
 import com.example.ecobit.R;
+import com.google.zxing.integration.android.IntentIntegrator;
+import com.google.zxing.integration.android.IntentResult;
 
 import java.io.Serializable;
+
+import static com.example.ecobit.R.id.btnSumarCredito;
 
 public class PpalUsuarioActivity extends AppCompatActivity {
 
@@ -26,6 +30,8 @@ public class PpalUsuarioActivity extends AppCompatActivity {
     private String currentPhotoPath;
     TextView tvNombre;
     String nombreCompleto;
+    // Btn Escaneo
+    Button btnSumarSaldo;
 
     //tvSaldo;
 
@@ -36,17 +42,17 @@ public class PpalUsuarioActivity extends AppCompatActivity {
         User user = (User) getIntent().getSerializableExtra("usuario");
         setContentView(R.layout.activity_ppal_usuario);
         //
-        btnPhoto =(Button) findViewById(R.id.btmPhoto);
+        btnPhoto=(Button) findViewById(R.id.btmPhoto);
         imageViewPerfil =(ImageView) findViewById(R.id.imageViewPerfil);
 
-        // impesión de datos del perfil
+        // impresión de datos del perfil
         tvNombre = (TextView)  findViewById(R.id.textViewNombre);
-        //tvSaldo =  (TextView)  findViewById(R.id.textViewSaldo);
-       tvNombre.setText (user.getNombre().toString());
+                    //tvSaldo =  (TextView)  findViewById(R.id.textViewSaldo);
+       tvNombre.setText (user.getApellido().toString());
         //tvSaldo.setText (user.getPassword().toString());
 
         //Toast con saludo
-        nombreCompleto = user.getNombre()+ " "+user.getApellido();
+        nombreCompleto = user.getApellido();
         Toast.makeText(PpalUsuarioActivity.this, "Bienvenido "+nombreCompleto, Toast.LENGTH_SHORT).show();
 
         // botón cargar foto perfil
@@ -56,6 +62,11 @@ public class PpalUsuarioActivity extends AppCompatActivity {
                 dispatchTakePictureIntent();
             }
         });
+
+        // botón leer qr
+        btnSumarSaldo = (Button) findViewById(btnSumarCredito);
+        btnSumarSaldo.setOnClickListener(escanear);
+
     }
 
     //METODO IrMenu
@@ -75,7 +86,9 @@ public class PpalUsuarioActivity extends AppCompatActivity {
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
+        super.onActivityResult(requestCode, resultCode, data);
+        IntentResult result = IntentIntegrator.parseActivityResult(requestCode, resultCode, data);
+         if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
             Bundle extras = data.getExtras();
             Bitmap imageBitmap = (Bitmap) extras.get("data");
             imageViewPerfil.setImageBitmap(imageBitmap);
@@ -104,6 +117,20 @@ public class PpalUsuarioActivity extends AppCompatActivity {
         Bitmap bitmap = BitmapFactory.decodeFile(currentPhotoPath, bmOptions);
         imageViewPerfil.setImageBitmap(bitmap);
     }
+
+        //LECTURA DE QR
+
+    private View.OnClickListener escanear = new View.OnClickListener() {
+
+       @Override
+        public void onClick(View v) {
+            switch (v.getId()){
+               case R.id.btnSumarCredito:
+                    new IntentIntegrator(PpalUsuarioActivity.this).initiateScan();
+                    break;
+           }
+        }
+    };
 
 
 

@@ -3,19 +3,15 @@ package com.example.ecobit.Services;
 import android.widget.EditText;
 
 import com.example.ecobit.Model.User;
+import com.google.gson.JsonObject;
 
 import java.util.List;
-import java.util.Map;
 
 import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.Field;
-import retrofit2.http.FieldMap;
 import retrofit2.http.GET;
-import retrofit2.http.Header;
-import retrofit2.http.Headers;
 import retrofit2.http.POST;
-import retrofit2.http.Part;
 import retrofit2.http.Query;
 
 public interface UserService {
@@ -44,5 +40,9 @@ public interface UserService {
             @Field("nro_doc") String nro_documento,
             @Field("tipo_doc") String tipo_doc,
             @Field("fecha_nac") String fecha_nac);
+
+    @POST("user/updatePhoto")
+    Call<User> actualizarFoto(
+            @Body JsonObject data);
 
 }

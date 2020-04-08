@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Parcelable;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -43,8 +42,8 @@ public class LoginActivity extends AppCompatActivity {
                 null,
                 null,
                 null,
-                null
-        );
+                null,
+                null);
         UserService userService = APIService.getApi().create(UserService.class);
         Call<User> userLogged = userService.login(user);
         final Intent iPpalUsuario = new Intent(this, PpalUsuarioActivity.class);

@@ -22,6 +22,7 @@ import com.example.ecobit.Model.User;
 import com.example.ecobit.R;
 import com.example.ecobit.Services.APIService;
 import com.example.ecobit.Services.UserService;
+import com.example.ecobit.utils.CircleTransform;
 import com.example.ecobit.utils.Image;
 import com.example.ecobit.utils.JSON;
 import com.google.gson.JsonObject;
@@ -44,6 +45,7 @@ public class PpalUsuarioActivity extends AppCompatActivity {
     static final int REQUEST_IMAGE_CAPTURE = 1;
     private String currentPhotoPath;
     TextView tvNombre;
+    TextView tvSaldo;
     private User usuarioActual;
     String nombreCompleto;
     // Btn Escaneo
@@ -60,14 +62,19 @@ public class PpalUsuarioActivity extends AppCompatActivity {
         setContentView(R.layout.activity_ppal_usuario);
         //
         btnPhoto = (Button) findViewById(R.id.btmPhoto);
+        String uriUsuario = usuarioActual.getFoto();
         imageViewPerfil = (ImageView) findViewById(R.id.imageViewPerfil);
+        if(uriUsuario != null) {
+            Picasso.get().load(user.getFoto()).centerInside().resize(600, 600).transform(new CircleTransform()).into(imageViewPerfil);
+        }
 
         // impresión de datos del perfil
         tvNombre = (TextView) findViewById(R.id.textViewNombre);
-        //tvSaldo =  (TextView)  findViewById(R.id.textViewSaldo);
-        assert user != null;
+        tvSaldo =  (TextView)  findViewById(R.id.textViewSaldo);
         tvNombre.setText(user.getNombre());
-        //tvSaldo.setText (user.getPassword().toString());
+        String saldo = user.getSaldo();
+        if(saldo == null) saldo = "0";
+        tvSaldo.setText (saldo);
 
         //Toast con saludo
         nombreCompleto = user.getApellido();
@@ -87,9 +94,14 @@ public class PpalUsuarioActivity extends AppCompatActivity {
 
     }
 
+    private void setUsuarioActual(User usuario) {
+        this.usuarioActual = usuario;
+    }
+
     //METODO IrMenu
     public void IrMenu(View view) {
         Intent menu = new Intent(this, MenuActivity.class);
+        menu.putExtra("usuario", this.usuarioActual);
         startActivity(menu);
         overridePendingTransition(R.anim.zoom_back_in, R.anim.zoom_back_out);
     }
@@ -117,17 +129,24 @@ public class PpalUsuarioActivity extends AppCompatActivity {
         IntentResult result = IntentIntegrator.parseActivityResult(requestCode, resultCode, data);
         if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
             Bundle extras = data.getExtras();
+
             Bitmap imageBitmap = (Bitmap) extras.get("data");
             String base64 = Image.getBase64(imageBitmap);
+            // Liberar la memoria de la imagen
             imageBitmap.recycle();
+
             UserService userService = APIService.getApi().create(UserService.class);
+            // Body de la request
             JsonObject obj = JSON.bodyActualizarFoto(base64, this.usuarioActual.getEmail());
             Call<User> userUpdated = userService.actualizarFoto(obj);
             userUpdated.enqueue(new Callback<User>() {
                 @Override
                 public void onResponse(Call<User> call, Response<User> response) {
                     User user = response.body();
-                    Picasso.get().load(user.getFoto()).into(imageViewPerfil);
+                    setUsuarioActual(user);
+                    // Picasso se encarga de cargar la imagen y transformarla
+                    Picasso.get().load(user.getFoto()).centerInside().resize(600, 600).transform(new CircleTransform()).into(imageViewPerfil);
+
                 }
 
                 @Override

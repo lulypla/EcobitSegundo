@@ -4,22 +4,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activities.Intro3Activity"
-    android:background="#0C918A">
+    android:background="#0C918A"
+    tools:context=".Activities.Intro3Activity">
 
     <Button
         android:id="@+id/btnEmpecemos"
         android:layout_width="280dp"
-        android:layout_height="112dp"
+        android:layout_height="50dp"
         android:layout_marginBottom="72dp"
-        android:background="@drawable/bottong"
+        android:background="@drawable/boton_redondo"
         android:fontFamily="@font/pl"
+        android:foregroundGravity="center_vertical|center_horizontal"
         android:onClick="Empecemos"
+        android:shadowColor="#02a4a5"
         android:text="¡EMPECEMOS!"
         android:textColor="#ffffff"
-        android:textSize="20dp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
@@ -43,8 +46,8 @@
         android:layout_marginRight="100dp"
         android:fontFamily="@font/pmedium"
         android:text="Reciclando Ganamos Todos"
-        android:textSize="25dp"
         android:textColor="#ffffff"
+        android:textSize="25dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView3" />

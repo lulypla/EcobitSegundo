@@ -3,16 +3,21 @@ package com.example.ecobit.Services;
 import android.widget.EditText;
 
 import com.example.ecobit.Model.User;
-import com.google.gson.JsonObject;
 
 import java.util.List;
+import java.util.Map;
 
 import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.Field;
+import retrofit2.http.FieldMap;
 import retrofit2.http.GET;
+import retrofit2.http.Header;
+import retrofit2.http.Headers;
 import retrofit2.http.POST;
+import retrofit2.http.Part;
 import retrofit2.http.Query;
+import retrofit2.http.QueryMap;
 
 public interface UserService {
     @GET("login")
@@ -21,14 +26,19 @@ public interface UserService {
     @GET("api/ecobit/user")
     Call<List<User>> getUsers();
 
-    //@POST("login")
-   // Call<User> login(@Query("email") String email,@Query("pass") String pass);
-
     @POST("login")
     Call<User> login(@Body User user);
 
     @POST("registro")
     Call<User> registro(@Body User user);
+
+    @POST("user/updatePhoto")
+    Call<User> postPhoto(@Body User user);
+
+    @POST("user/updatePhoto")
+    Call<User> post000Photo(@Query("email") String email,
+                            @Query("foto") String foto);
+
 
     @POST("registro")
     Call<User> signI2(
@@ -40,9 +50,5 @@ public interface UserService {
             @Field("nro_doc") String nro_documento,
             @Field("tipo_doc") String tipo_doc,
             @Field("fecha_nac") String fecha_nac);
-
-    @POST("user/updatePhoto")
-    Call<User> actualizarFoto(
-            @Body JsonObject data);
 
 }

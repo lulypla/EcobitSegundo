@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#0C918A"
-    tools:context=".Activities.Intro3Activity">
+    tools:context=".Activities.Intro3Activity"
+    android:background="#0C918A">
 
     <Button
         android:id="@+id/btnEmpecemos"
@@ -46,8 +46,8 @@
         android:layout_marginRight="100dp"
         android:fontFamily="@font/pmedium"
         android:text="Reciclando Ganamos Todos"
-        android:textColor="#ffffff"
         android:textSize="25dp"
+        android:textColor="#ffffff"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView3" />

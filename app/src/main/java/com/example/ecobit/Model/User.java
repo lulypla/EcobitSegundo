@@ -1,5 +1,7 @@
 package com.example.ecobit.Model;
 
+import android.widget.EditText;
+
 import java.io.Serializable;
 
 public class User implements Serializable {
@@ -17,7 +19,6 @@ public class User implements Serializable {
         private String saldo;
 
         public User(String email, String password, String nombre, String apellido, String tipo_doc, String nro_documento, String fecha_nac, String tel, String foto, String saldo) {
-            this.saldo = saldo;
             this.id = id +1;
             this.email = email;
             this.password = password;
@@ -28,6 +29,7 @@ public class User implements Serializable {
             this.fecha_nac = fecha_nac;
             this.tel = tel;
             this.foto = foto;
+            this.saldo = saldo;
         }
 
 
@@ -112,11 +114,8 @@ public class User implements Serializable {
         this.foto = foto;
     }
 
-    public String getSaldo() {
-        return saldo;
-    }
+    public String getSaldo() {return saldo;}
 
-    public void setSaldo(String saldo) {
-        this.saldo = saldo;
+    public void setSaldo(String saldo) {this.saldo =saldo;}
+
     }
-}

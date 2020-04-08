@@ -10,40 +10,40 @@
         android:id="@+id/imageButtonHamburguesa"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
         android:layout_marginRight="32dp"
-        android:background="#00FFFFFF"
+        android:layout_marginTop="32dp"
         android:contentDescription="@string/hamburguesa"
-        android:onClick="IrPpalUsuario"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/hamburguesa" />
+        app:srcCompat="@drawable/hamburguesa"
+        android:onClick="IrPpalUsuario"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Mi Cuenta"
-        android:textColor="#707070"
-        android:textSize="30sp"
-        android:layout_marginLeft="70dp"
         android:layout_marginStart="70dp"
+        android:layout_marginLeft="70dp"
         android:layout_marginTop="50dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="70dp"
-        android:layout_marginLeft="70dp"
-        android:layout_marginTop="110dp"
-        android:onClick="IrMiPerfil"
-        android:text="Perfil"
+        android:onClick="IrMiCuenta"
+        android:text="Mi Cuenta"
         android:textColor="#707070"
         android:textSize="30sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Perfil"
+        android:textColor="#707070"
+        android:textSize="30sp"
+        android:layout_marginLeft="70dp"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="110dp"
+        android:onClick="IrMiPerfil"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -72,29 +72,29 @@
         app:layout_constraintTop_toTopOf="parent"/>
 
     <TextView
-        android:layout_width="0dp"
-        android:layout_height="41dp"
-        android:layout_marginStart="70dp"
-        android:layout_marginLeft="70dp"
-        android:layout_marginTop="290dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="Canjear EcoBits"
         android:textColor="#707070"
         android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginLeft="70dp"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="290dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <TextView
+        android:id="@+id/tvSumarEcobits"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="70dp"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="350dp"
         android:text="Sumar EcoBits"
         android:textColor="#707070"
         android:textSize="30sp"
-        android:layout_marginLeft="70dp"
-        android:layout_marginStart="70dp"
-        android:layout_marginTop="350dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -124,14 +124,15 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="70dp"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="590dp"
+        android:onClick="IrSobreEcobits"
         android:text="Sobre EcoBits"
         android:textColor="#707070"
         android:textSize="30sp"
-        android:layout_marginLeft="70dp"
-        android:layout_marginStart="70dp"
-        android:layout_marginTop="590dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:layout_width="wrap_content"

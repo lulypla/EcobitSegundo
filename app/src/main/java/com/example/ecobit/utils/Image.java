@@ -1,13 +1,15 @@
 package com.example.ecobit.utils;
-    import android.graphics.Bitmap;
-    import android.graphics.Canvas;
-    import android.graphics.Matrix;
-    import android.graphics.Paint;
-    import android.util.Base64;
 
-    import java.io.ByteArrayOutputStream;
+import android.graphics.Bitmap;
+import android.graphics.Canvas;
+import android.graphics.Matrix;
+import android.graphics.Paint;
+import android.util.Base64;
+
+import java.io.ByteArrayOutputStream;
 
 public class Image {
+
     public static Bitmap getResizedBitmap(Bitmap bitmap, int newWidth, int newHeight) {
         Bitmap resizedBitmap = Bitmap.createBitmap(newWidth, newHeight, Bitmap.Config.ARGB_8888);
 
@@ -31,6 +33,5 @@ public class Image {
         byte[] byteArray = byteArrayOutputStream.toByteArray();
         String encoded = Base64.encodeToString(byteArray, Base64.NO_WRAP);
         return encoded;
-
     }
 }

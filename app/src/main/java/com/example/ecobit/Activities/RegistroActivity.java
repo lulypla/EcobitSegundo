@@ -2,6 +2,7 @@ package com.example.ecobit.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.accessibilityservice.GestureDescription;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -64,7 +65,9 @@ public class RegistroActivity extends AppCompatActivity {
                         null,
                         null,
                         tel.getText().toString(),
-                        null, null);
+                        null,
+                        null);
+
 
                         Insert(user);
 

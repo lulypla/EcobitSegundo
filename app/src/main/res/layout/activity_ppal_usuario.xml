@@ -16,16 +16,15 @@
         app:srcCompat="@drawable/fndocurvo"/>
 
     <Button
-        android:id="@+id/btnMenu"
-        android:layout_width="45dp"
-        android:layout_height="32dp"
+        android:id="@+id/buttonMenu"
+        android:layout_width="26dp"
+        android:layout_height="30dp"
         android:layout_marginStart="32dp"
         android:layout_marginLeft="32dp"
         android:layout_marginTop="32dp"
         android:background="@drawable/hambwhite"
-        android:onClick="IrMenu"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imageViewPerfil"
@@ -76,35 +75,34 @@
         android:layout_height="0dp"
         android:fontFamily="@font/psemibold"
         android:gravity="center_horizontal|center_vertical"
-        android:textColor="#0C918A"
         android:textSize="30sp"
+        android:textColor="#0C918A"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView7"
-        tools:text="10" />
+        app:layout_constraintTop_toBottomOf="@+id/textView7"/>
 
     <TextView
         android:id="@+id/textView8"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="center"
         android:text="EcoBits"
         android:textColor="#0C918A"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewSaldo" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewSaldo"/>
 
     <Button
         android:id="@+id/btnSumarCredito"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:background="@drawable/mas"
+        android:onClick="escanear"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView8"/>
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
     <Button
         android:id="@+id/btmPhoto"

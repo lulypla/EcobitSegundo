@@ -3,11 +3,7 @@ package com.example.ecobit.utils;
 import com.google.gson.JsonIOException;
 import com.google.gson.JsonObject;
 
-import org.json.JSONException;
-import org.json.JSONObject;
-
 public class JSON {
-
     public static JsonObject nuevo() {
         return new JsonObject();
     }
@@ -22,4 +18,5 @@ public class JSON {
         }
         return body;
     }
+
 }

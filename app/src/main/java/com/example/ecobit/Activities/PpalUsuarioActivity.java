@@ -1,45 +1,36 @@
 package com.example.ecobit.Activities;
 
-import androidx.appcompat.app.AppCompatActivity;
-import android.Manifest;
-import android.content.pm.PackageManager;
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.media.Image;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.util.Base64;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.ecobit.Model.User;
 import com.example.ecobit.R;
 import com.example.ecobit.Services.APIService;
 import com.example.ecobit.Services.UserService;
-
 import com.example.ecobit.utils.CircleTransform;
-import com.example.ecobit.utils.JSON;
-import com.google.gson.JsonObject;
+import com.example.ecobit.utils.Sesion;
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
 import com.squareup.picasso.Picasso;
 
 import java.io.ByteArrayOutputStream;
-import java.io.Serializable;
 
-import de.hdodenhof.circleimageview.CircleImageView;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-import retrofit2.http.Query;
 
 import static com.example.ecobit.R.id.btnSumarCredito;
-import static com.example.ecobit.R.id.imageButtonMenu;
 
 
 
@@ -76,7 +67,7 @@ public class PpalUsuarioActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        final User user = (User) getIntent().getSerializableExtra("usuario");
+        final User user = Sesion.getUser(this);
         this.usuarioActual = user;
         setContentView(R.layout.activity_ppal_usuario);
         //
@@ -190,10 +181,10 @@ public class PpalUsuarioActivity extends AppCompatActivity {
         //----------------
         User userUp = new User(email, pass, nombre, apellido, tipo_doc, nro_documento, fecha_nac, tel, fotoPerfil, saldo);
         //----------------
+        final ProgressDialog spinner = ProgressDialog.show(PpalUsuarioActivity.this, "Actualizando Foto",
+                "Enviando datos, por favor espere...", true);
         UserService userService = APIService.getApi().create(UserService.class);
-        //JsonObject obj = JSON.bodyActualizarFoto(base64, this.usuarioActual.getEmail());   OTRA FORMA DE PASARLO
         Call<User> userActualizado = userService.postPhoto(userUp);
-        final Intent iPpalUsuario = new Intent(this, PpalUsuarioActivity.class);
         userActualizado.enqueue(new Callback<User>() {
             @Override
             public void onResponse(Call<User> call, Response<User> response) {
@@ -201,10 +192,12 @@ public class PpalUsuarioActivity extends AppCompatActivity {
                 setUsuarioActual(user);
                 if (user != null) {
                     Picasso.get().load(user.getFoto()).centerInside().resize(600, 600).transform(new CircleTransform()).into(imageViewPerfil);
+                    spinner.cancel();
                     Toast.makeText(PpalUsuarioActivity.this, "Foto cargada", Toast.LENGTH_LONG).show();
 
 
                 } else {
+                    spinner.cancel();
                     Toast.makeText(PpalUsuarioActivity.this, "Foto de Perfil Actualizada", Toast.LENGTH_LONG).show();
 
                 }
@@ -212,6 +205,7 @@ public class PpalUsuarioActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<User> call, Throwable t) {
+                spinner.cancel();
                 Toast.makeText(PpalUsuarioActivity.this, "Error en Pedido, Compruebe su conexión a internet", Toast.LENGTH_LONG).show();
             }
         });

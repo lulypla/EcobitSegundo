@@ -69,7 +69,6 @@
         android:background="@drawable/boton_redondo"
         android:fontFamily="@font/pmedium"
         android:foreground="?attr/selectableItemBackground"
-        android:gravity="center"
         android:onClick="PpalUsuaro"
         android:paddingLeft="25dp"
         android:paddingRight="25dp"

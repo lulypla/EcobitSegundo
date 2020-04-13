@@ -10,230 +10,257 @@
         android:id="@+id/imageButtonHamburguesa"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="32dp"
-        android:layout_marginRight="32dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:background="#00FFFFFF"
         android:contentDescription="@string/hamburguesa"
+        android:foreground="?attr/selectableItemBackground"
+        android:onClick="IrPpalUsuario"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/hamburguesa"
-        android:onClick="IrPpalUsuario"/>
+        app:srcCompat="@drawable/hamburguesa" />
 
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/tvMiCuenta"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="70dp"
-        android:layout_marginLeft="70dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="60dp"
+        android:foreground="?attr/selectableItemBackground"
         android:onClick="IrMiCuenta"
+        android:paddingLeft="60dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
         android:text="Mi Cuenta"
         android:textColor="#707070"
         android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/tvPerfil"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:foreground="?attr/selectableItemBackground"
+        android:onClick="IrMiPerfil"
+        android:paddingLeft="60dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
         android:text="Perfil"
         android:textColor="#707070"
         android:textSize="30sp"
-        android:layout_marginLeft="70dp"
-        android:layout_marginStart="70dp"
-        android:layout_marginTop="110dp"
-        android:onClick="IrMiPerfil"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toBottomOf="@+id/tvMiCuenta" />
 
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/tvMisEcobits"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:onClick="IrMisEcobits"
+        android:paddingLeft="60dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
         android:text="Mis EcoBits"
         android:textColor="#707070"
         android:textSize="30sp"
-        android:layout_marginLeft="70dp"
-        android:layout_marginStart="70dp"
-        android:layout_marginTop="170dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:onClick="IrMisEcobits"/>
+        app:layout_constraintTop_toBottomOf="@+id/tvPerfil" />
 
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/tvLogros"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:onClick="IrLogros"
+        android:paddingLeft="60dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
         android:text="Logros"
         android:textColor="#707070"
         android:textSize="30sp"
-        android:layout_marginLeft="70dp"
-        android:layout_marginStart="70dp"
-        android:layout_marginTop="230dp"
-        android:onClick="IrLogros"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toBottomOf="@+id/tvMisEcobits" />
 
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/tvCanjearEcobits"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:foreground="?attr/selectableItemBackground"
+        android:paddingLeft="60dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
         android:text="Canjear EcoBits"
         android:textColor="#707070"
         android:textSize="30sp"
-        android:layout_marginLeft="70dp"
-        android:layout_marginStart="70dp"
-        android:layout_marginTop="290dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toBottomOf="@+id/tvLogros" />
 
     <TextView
         android:id="@+id/tvSumarEcobits"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="70dp"
-        android:layout_marginLeft="70dp"
-        android:layout_marginTop="350dp"
+        android:foreground="?attr/selectableItemBackground"
+        android:paddingLeft="60dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
         android:text="Sumar EcoBits"
         android:textColor="#707070"
         android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/tvCanjearEcobits" />
 
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/tvEventos"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:foreground="?attr/selectableItemBackground"
+        android:onClick="IrEventos"
+        android:paddingLeft="60dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
         android:text="Eventos"
         android:textColor="#707070"
         android:textSize="30sp"
-        android:layout_marginLeft="70dp"
-        android:layout_marginStart="70dp"
-        android:layout_marginTop="410dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:onClick="IrEventos"/>
+        app:layout_constraintTop_toBottomOf="@+id/tvSumarEcobits" />
 
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/tvPuntosReciclaje"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:foreground="?selectableItemBackgroundBorderless"
+        android:paddingLeft="60dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
         android:text="Puntos de Reciclaje"
         android:textColor="#707070"
         android:textSize="30sp"
-        android:layout_marginLeft="70dp"
-        android:layout_marginStart="70dp"
-        android:layout_marginTop="470dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toBottomOf="@+id/tvEventos" />
 
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/tvSobreEcoBits"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="70dp"
-        android:layout_marginLeft="70dp"
-        android:layout_marginTop="590dp"
+        android:foreground="?attr/selectableItemBackground"
         android:onClick="IrSobreEcobits"
+        android:paddingLeft="60dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
         android:text="Sobre EcoBits"
         android:textColor="#707070"
         android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/divider9" />
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:paddingLeft="60dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
         android:text="Ayuda"
         android:textColor="#707070"
         android:textSize="30sp"
-        android:layout_marginLeft="70dp"
-        android:layout_marginStart="70dp"
-        android:layout_marginTop="650dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toBottomOf="@+id/tvSobreEcoBits" />
 
     <View
         android:id="@+id/divider1"
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="#dbefee"
-        android:layout_marginTop="100dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toBottomOf="@+id/tvMiCuenta" />
 
     <View
         android:id="@+id/divider2"
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="#dbefee"
-        android:layout_marginTop="160dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toBottomOf="@+id/tvPerfil" /><![CDATA[
+
+    />
+
+    ]]>
 
     <View
         android:id="@+id/divider3"
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="#dbefee"
-        android:layout_marginTop="220dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>/>
+        app:layout_constraintTop_toBottomOf="@+id/tvMisEcobits" />
 
     <View
         android:id="@+id/divider4"
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="#dbefee"
-        android:layout_marginTop="280dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toBottomOf="@+id/tvLogros" />
 
     <View
         android:id="@+id/divider5"
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="#dbefee"
-        android:layout_marginTop="340dp"
+        android:paddingLeft="60dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toBottomOf="@+id/tvCanjearEcobits" />
 
     <View
         android:id="@+id/divider6"
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="#dbefee"
-        android:layout_marginTop="400dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toBottomOf="@+id/tvSumarEcobits" />
 
     <View
         android:id="@+id/divider7"
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="#dbefee"
-        android:layout_marginTop="460dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toBottomOf="@+id/tvEventos" />
 
     <View
         android:id="@+id/divider8"
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="#dbefee"
-        android:layout_marginTop="520dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toBottomOf="@+id/tvPuntosReciclaje" />
 
     <View
         android:id="@+id/divider9"
         android:layout_width="match_parent"
         android:layout_height="1dp"
+        android:layout_marginTop="75dp"
         android:background="#dbefee"
-        android:layout_marginTop="580dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toBottomOf="@+id/tvPuntosReciclaje" />
 
     <View
         android:id="@+id/divider10"
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="#dbefee"
-        android:layout_marginTop="640dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toBottomOf="@+id/tvSobreEcoBits" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

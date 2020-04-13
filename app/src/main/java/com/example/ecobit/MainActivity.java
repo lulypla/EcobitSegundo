@@ -5,28 +5,29 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.Toast;
+import android.widget.TextView;
 
 import com.example.ecobit.Activities.Intro2Activity;
-import com.example.ecobit.Activities.LoginActivity;
+import com.example.ecobit.Activities.PpalUsuarioActivity;
 import com.example.ecobit.Model.User;
-import com.example.ecobit.Services.APIService;
-import com.example.ecobit.Services.UserService;
-
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
+import com.example.ecobit.utils.Sesion;
 
 public class MainActivity extends AppCompatActivity {
 
+
+    TextView tvNombre;
+    TextView tvSaldo;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        User user = Sesion.getUser(this);
+        if(user != null) {
+            startActivity(new Intent(this, PpalUsuarioActivity.class));
+        } else {
+            setContentView(R.layout.activity_intro);
+        }
      }
 
      //METODO Next para  btnnext

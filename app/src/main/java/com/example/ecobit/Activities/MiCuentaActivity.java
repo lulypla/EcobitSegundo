@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.example.ecobit.R;
+import com.example.ecobit.utils.Sesion;
 
 public class MiCuentaActivity extends AppCompatActivity {
 
@@ -22,4 +23,14 @@ public class MiCuentaActivity extends AppCompatActivity {
         startActivity(menu);
         overridePendingTransition(R.anim.zoom_back_in, R.anim.zoom_back_out);
     }
+
+    public void cerrarSesion(View view) {
+        Intent logout = new Intent(this, LoginActivity.class);
+        logout.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        Sesion.borrar(this);
+        startActivity(logout);
+        overridePendingTransition(R.anim.zoom_back_in, R.anim.zoom_back_out);
+    }
+
+
 }

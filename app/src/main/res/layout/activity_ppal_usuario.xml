@@ -10,19 +10,22 @@
         android:id="@+id/imageViewFondo"
         android:layout_width="552dp"
         android:layout_height="504dp"
+        android:foreground="?selectableItemBackground"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/fndocurvo"/>
+        app:srcCompat="@drawable/fndocurvo" />
 
     <Button
         android:id="@+id/buttonMenu"
-        android:layout_width="26dp"
+        android:layout_width="44dp"
         android:layout_height="30dp"
         android:layout_marginStart="32dp"
         android:layout_marginLeft="32dp"
         android:layout_marginTop="32dp"
         android:background="@drawable/hambwhite"
+        android:foreground="?selectableItemBackground"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -97,6 +100,7 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:background="@drawable/mas"
+        android:foreground="?selectableItemBackground"
         android:onClick="escanear"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -109,6 +113,7 @@
         android:layout_width="25dp"
         android:layout_height="25dp"
         android:background="@drawable/edit_104206"
+        android:foreground="?selectableItemBackground"
         app:layout_constraintEnd_toEndOf="@+id/imageViewPerfil"
         app:layout_constraintTop_toTopOf="@+id/imageViewPerfil" />
 

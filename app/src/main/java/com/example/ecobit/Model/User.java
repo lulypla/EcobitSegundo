@@ -32,6 +32,8 @@ public class User implements Serializable {
             this.saldo = saldo;
         }
 
+        public User() {}
+
 
 
     public static int getId() {

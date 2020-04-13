@@ -29,9 +29,6 @@ public class MenuActivity extends AppCompatActivity {
         final User user = (User) getIntent().getSerializableExtra("usuario");
         setContentView(R.layout.activity_menu);
 
-        String nombre;
-        nombre = user.getNombre();
-        Toast.makeText(this, "nombre es " + nombre, Toast.LENGTH_SHORT).show();
 
         tvSumarSaldo = (TextView) findViewById(tvSumarEcobits);
         tvSumarSaldo.setOnClickListener(new View.OnClickListener() {
@@ -47,6 +44,7 @@ public class MenuActivity extends AppCompatActivity {
     //METODO IrPpalUsuario para ir a la página principal del usuario
     public void IrPpalUsuario(View view) {
         Intent irPpalUsuario = new Intent(this, PpalUsuarioActivity.class);
+        irPpalUsuario.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(irPpalUsuario);
         overridePendingTransition(R.anim.zoom_back_in, R.anim.zoom_back_out);
     }

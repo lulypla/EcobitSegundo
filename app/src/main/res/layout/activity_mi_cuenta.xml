@@ -96,23 +96,26 @@
     </FrameLayout>
 
     <FrameLayout
+        android:id="@+id/tvCerrarSesion"
         android:layout_width="345dp"
         android:layout_height="70dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="400dp"
         android:background="@drawable/logros_claro"
+        android:foreground="?attr/selectableItemBackground"
+        android:onClick="cerrarSesion"
         app:layout_constraintStart_toStartOf="@id/imageButtonHamburguesa"
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="18dp"
             android:text="Cerrar Sesión"
             android:textColor="#707070"
-            android:textSize="24sp"
-            android:layout_marginTop="18dp"
-            android:layout_marginStart="25dp"
-            android:layout_marginLeft="25dp" />
+            android:textSize="24sp" />
 
     </FrameLayout>
 

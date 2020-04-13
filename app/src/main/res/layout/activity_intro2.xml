@@ -61,12 +61,11 @@
         android:layout_marginRight="24dp"
         android:fontFamily="@font/pmedium"
         android:paddingLeft="20sp"
-        android:text="TextView"
+        android:text="¡Ganamos Todos!"
         android:textColor="#FFFFFF"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
-        tools:layout_editor_absoluteY="410dp"
-        tools:text="¡Ganamos Todos!" />
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

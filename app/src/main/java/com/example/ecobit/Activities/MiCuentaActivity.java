@@ -25,7 +25,7 @@ public class MiCuentaActivity extends AppCompatActivity {
     }
 
     public void cerrarSesion(View view) {
-        Intent logout = new Intent(this, LoginActivity.class);
+        Intent logout = new Intent(this, EmpecemosActivity.class);
         logout.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         Sesion.borrar(this);
         startActivity(logout);

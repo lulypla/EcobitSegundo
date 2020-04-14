@@ -19,6 +19,8 @@ import com.example.ecobit.utils.Sesion;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
 import java.util.Date;
 
 public class EditarPerfilActivity extends AppCompatActivity {
@@ -40,8 +42,6 @@ public class EditarPerfilActivity extends AppCompatActivity {
             this.etApellido.setText(user.getApellido());
             this.etCorreo.setText(user.getEmail());
             etCel.setText(user.getTel());
-            Date fnac = getFnac(user.getFecha_nac());
-            this.dpFNac.updateDate(fnac.getYear(), fnac.getMonth(), fnac.getDate());
         }
 
 

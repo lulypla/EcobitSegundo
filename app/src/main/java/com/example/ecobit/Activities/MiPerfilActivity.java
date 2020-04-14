@@ -28,7 +28,9 @@ public class MiPerfilActivity extends AppCompatActivity {
     private void setTextViewsValues(User user) {
         tvNombre.setText(user.getNombre() + " " + user.getApellido());
         tvCorreo.setText(user.getEmail());
-        tvEdad.setText(user.getFecha_nac());
+        String nac = user.getFecha_nac();
+        if(nac.equals("")) nac = "No hay fecha de nacimiento";
+        tvEdad.setText(nac);
         tvCel.setText(user.getTel());
     }
 

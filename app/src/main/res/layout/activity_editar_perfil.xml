@@ -14,269 +14,272 @@
         android:layout_marginLeft="32dp"
         android:layout_marginTop="32dp"
         android:contentDescription="@string/atras"
+        android:onClick="IrPpalUsuario"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/atras"
-        android:onClick="IrPpalUsuario"/>
+        app:srcCompat="@drawable/atras" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="12dp"
         android:text="Editar Perfil"
         android:textColor="#02a4a5"
         android:textSize="40sp"
         android:textStyle="bold"
-        android:layout_marginTop="90dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginLeft="30dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toBottomOf="@+id/imageButtonAtras" />
 
     <ImageView
+        android:id="@+id/imageViewPerfil"
         android:layout_width="74dp"
         android:layout_height="74dp"
-        android:id="@+id/imageViewPerfil"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
         android:background="@drawable/perfilxs"
-        android:layout_marginStart="293dp"
-        android:layout_marginTop="33dp"
         android:contentDescription="@string/perfil"
-        android:layout_marginLeft="293dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/TextViewUser"
-        android:textSize="14sp"
-        android:textColor="#68b3f5"
-        android:text="EDITAR"
-        android:layout_marginStart="307dp"
-        android:layout_marginTop="115dp"
-        android:layout_marginLeft="307dp"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="600dp"
         android:id="@+id/card"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
         android:layout_marginTop="150dp"
+        android:layout_marginBottom="25dp"
         android:background="@drawable/tarjetablanca"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
+            android:id="@+id/textViewNombre"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/textViewNombre"
-            android:text="Nombre"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:textColor="#707070"
-            android:layout_marginTop="50dp"
             android:layout_marginStart="75dp"
             android:layout_marginLeft="75dp"
+            android:layout_marginTop="50dp"
+            android:text="Nombre"
+            android:textColor="#707070"
+            android:textSize="20sp"
+            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
-            android:layout_width="270dp"
-            android:layout_height="40dp"
             android:id="@+id/editTextNombre"
-            android:paddingStart="20dp"
-            android:paddingEnd="20dp"
-            android:textSize="16sp"
-            android:textColor="#707070"
-            android:background="@drawable/input"
-            android:text="Fulano"
-            android:layout_marginTop="85dp"
-            android:inputType="text"
+            android:layout_width="270dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="60dp"
             android:layout_marginLeft="60dp"
-            android:layout_marginStart="60dp" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/textViewApellido"
-            android:text="Apellido"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:textColor="#707070"
-            android:layout_marginTop="135dp"
-            android:layout_marginStart="75dp"
-            android:layout_marginLeft="75dp" />
-
-        <EditText
-            android:layout_width="270dp"
-            android:layout_height="40dp"
-            android:id="@+id/editTextApellido"
-            android:paddingStart="20dp"
-            android:paddingEnd="20dp"
-            android:textSize="16sp"
-            android:textColor="#707070"
+            android:layout_marginTop="85dp"
             android:background="@drawable/input"
-            android:text="De Tal"
-            android:layout_marginStart="60dp"
-            android:layout_marginTop="170dp"
             android:inputType="text"
-            android:layout_marginLeft="60dp" />
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:text="Fulano"
+            android:textColor="#707070"
+            android:textSize="16sp" />
 
         <TextView
+            android:id="@+id/textViewApellido"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="75dp"
+            android:layout_marginLeft="75dp"
+            android:layout_marginTop="135dp"
+            android:text="Apellido"
+            android:textColor="#707070"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/editTextApellido"
+            android:layout_width="270dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="60dp"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="170dp"
+            android:background="@drawable/input"
+            android:inputType="text"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:text="De Tal"
+            android:textColor="#707070"
+            android:textSize="16sp" />
+
+        <TextView
             android:id="@+id/textViewEmail"
-            android:text="E-mail"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:textColor="#707070"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="75dp"
+            android:layout_marginLeft="75dp"
             android:layout_marginTop="220dp"
-            android:layout_marginStart="75dp"
-            android:layout_marginLeft="75dp" />
+            android:text="E-mail"
+            android:textColor="#707070"
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
         <EditText
-            android:layout_width="270dp"
-            android:layout_height="40dp"
             android:id="@+id/editTextEmail"
-            android:paddingStart="20dp"
-            android:paddingEnd="20dp"
-            android:textSize="16sp"
-            android:textColor="#707070"
-            android:background="@drawable/input"
-            android:text="fulano@gmail.com"
-            android:layout_marginStart="60dp"
-            android:layout_marginTop="255dp"
-            android:inputType="textEmailAddress"
-            android:layout_marginLeft="60dp" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/textViewCelular"
-            android:text="Celular"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:textColor="#707070"
-            android:layout_marginTop="305dp"
-            android:layout_marginStart="75dp"
-            android:layout_marginLeft="75dp" />
-
-        <EditText
             android:layout_width="270dp"
             android:layout_height="40dp"
-            android:id="@+id/editTextCelular"
+            android:layout_marginStart="60dp"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="255dp"
+            android:background="@drawable/input"
+            android:inputType="textEmailAddress"
             android:paddingStart="20dp"
             android:paddingEnd="20dp"
-            android:textSize="16sp"
+            android:text="fulano@gmail.com"
             android:textColor="#707070"
-            android:background="@drawable/input"
-            android:text="099 123 456"
-            android:layout_marginStart="60dp"
-            android:layout_marginTop="340dp"
-            android:inputType="phone"
-            android:layout_marginLeft="60dp" />
+            android:textSize="16sp" />
 
         <TextView
+            android:id="@+id/textViewCelular"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/textViewNacimiento"
-            android:text="F. de Nac."
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:textColor="#707070"
-            android:layout_marginTop="390dp"
             android:layout_marginStart="75dp"
-            android:layout_marginLeft="75dp" />
+            android:layout_marginLeft="75dp"
+            android:layout_marginTop="305dp"
+            android:text="Celular"
+            android:textColor="#707070"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/editTextCelular"
+            android:layout_width="270dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="60dp"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="340dp"
+            android:background="@drawable/input"
+            android:inputType="phone"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:text="099 123 456"
+            android:textColor="#707070"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/textViewNacimiento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="75dp"
+            android:layout_marginLeft="75dp"
+            android:layout_marginTop="390dp"
+            android:text="F. de Nac."
+            android:textColor="#707070"
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
         <DatePicker
+            android:id="@+id/CalendarViewFNac"
             android:layout_width="160dp"
             android:layout_height="50dp"
-            android:id="@+id/CalendarViewFNac"
-            android:layout_marginTop="425dp"
             android:layout_marginStart="60dp"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="425dp"
             android:calendarViewShown="true"
             android:datePickerMode="calendar"
             android:dayOfWeekBackground="#02a4a5"
-            tools:targetApi="lollipop"
-            android:layout_marginLeft="60dp" />
+            tools:targetApi="lollipop" />
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:id="@+id/textViewSexo"
-            android:text="Sexo"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:textColor="#707070"
-            android:layout_marginTop="390dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginStart="240dp"
-            android:layout_marginLeft="240dp" />
+            android:layout_marginLeft="240dp"
+            android:layout_marginTop="390dp"
+            android:text="Sexo"
+            android:textColor="#707070"
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:labelFor="@+id/radioButtonM"
-            android:layout_marginTop="425dp"
             android:layout_marginStart="220dp"
-            android:layout_marginLeft="220dp" />
+            android:layout_marginLeft="220dp"
+            android:layout_marginTop="425dp"
+            android:labelFor="@+id/radioButtonM" />
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:id="@+id/radioButtonM"
-            android:text="M"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginStart="230dp"
+            android:layout_marginLeft="230dp"
             android:layout_marginTop="455dp"
-            android:layout_marginLeft="230dp" />
+            android:text="M" />
 
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:labelFor="@+id/radioButtonF"
-            android:layout_marginTop="425dp"
             android:layout_marginStart="280dp"
-            android:layout_marginLeft="280dp" />
+            android:layout_marginLeft="280dp"
+            android:layout_marginTop="425dp"
+            android:labelFor="@+id/radioButtonF" />
 
         <TextView
+            android:id="@+id/radioButtonF"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/radioButtonF"
-            android:text="F"
             android:layout_marginStart="260dp"
+            android:layout_marginLeft="260dp"
             android:layout_marginTop="455dp"
-            android:layout_marginLeft="260dp" />
+            android:text="F" />
 
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:labelFor="@+id/radioButtonX"
-            android:layout_marginTop="425dp"
             android:layout_marginStart="250dp"
-            android:layout_marginLeft="250dp" />
+            android:layout_marginLeft="250dp"
+            android:layout_marginTop="425dp"
+            android:labelFor="@+id/radioButtonX" />
 
         <TextView
+            android:id="@+id/radioButtonX"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/radioButtonX"
-            android:text="X"
             android:layout_marginStart="290dp"
+            android:layout_marginLeft="290dp"
             android:layout_marginTop="455dp"
-            android:layout_marginLeft="290dp" />
+            android:text="X" />
 
         <Button
+            android:id="@+id/buttonGuardar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/buttonGuardar"
-            android:layout_marginTop="475dp"
             android:layout_marginLeft="80dp"
+            android:layout_marginTop="475dp"
+            android:background="@drawable/boton_redondo"
+            android:onClick="IrPpalUsuario"
             android:text="GUARDAR"
             android:textColor="#fff"
             android:textSize="21sp"
             android:textStyle="bold"
-            android:background="@drawable/bottong"
-            app:srcCompat="@drawable/bottong"
-            android:onClick="IrPpalUsuario" />
+            app:srcCompat="@drawable/bottong" />
 
     </FrameLayout>
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/card"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -74,15 +74,15 @@
 
     <TextView
         android:id="@+id/textViewSaldo"
-        android:layout_width="53dp"
-        android:layout_height="0dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:fontFamily="@font/psemibold"
         android:gravity="center_horizontal|center_vertical"
-        android:textSize="30sp"
         android:textColor="#0C918A"
+        android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView7"/>
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
     <TextView
         android:id="@+id/textView8"

@@ -12,11 +12,12 @@
         android:layout_marginStart="32dp"
         android:layout_marginLeft="32dp"
         android:layout_marginTop="32dp"
+        android:background="#00FFFFFF"
         android:contentDescription="@string/hamburguesa"
+        android:onClick="IrMenu"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/hamburguesa"
-        android:onClick="IrMenu"/>
+        app:srcCompat="@drawable/hamburguesa" />
 
     <TextView
         android:layout_width="wrap_content"

@@ -13,7 +13,10 @@
         android:layout_marginStart="32dp"
         android:layout_marginLeft="32dp"
         android:layout_marginTop="32dp"
+        android:background="#00FFFFFF"
         android:contentDescription="@string/hamburguesa"
+        android:foreground="?selectableItemBackground"
+        android:onClick="IrMenu"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/hamburguesa" />
@@ -51,14 +54,15 @@
 
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="10"
-            android:textColor="#02a4a5"
-            android:textStyle="bold"
-            android:textSize="30sp"
+            android:layout_height="match_parent"
             android:layout_marginStart="320dp"
+            android:layout_marginLeft="320dp"
             android:layout_marginTop="15dp"
-            android:layout_marginLeft="320dp" />
+            android:text="140"
+            android:textColor="#02a4a5"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:visibility="visible" />
 
     </FrameLayout>
 
@@ -115,11 +119,10 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="300dp"
-        android:layout_marginTop="390dp"
+        android:layout_marginTop="384dp"
         android:background="@drawable/tarjetablanca"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
-
 
 
     </FrameLayout>

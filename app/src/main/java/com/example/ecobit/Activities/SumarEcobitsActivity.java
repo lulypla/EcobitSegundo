@@ -12,6 +12,7 @@ import android.widget.Toast;
 
 import com.example.ecobit.Model.User;
 import com.example.ecobit.R;
+import com.example.ecobit.utils.Sesion;
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
 
@@ -21,7 +22,7 @@ public class SumarEcobitsActivity extends AppCompatActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        User user = (User) getIntent().getSerializableExtra("usuario");
+        User user = Sesion.getUser(this);
         setContentView(R.layout.activity_sumar_ecobits);
         configureButtonReader();
 
